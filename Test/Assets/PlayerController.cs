@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
         moveVelocity = moveInput.normalized * speed;
     }
 
-    void fixedUpdate()
+    void FixedUpdate()
     {
         rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
     }
