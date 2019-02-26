@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 1283549412692984125}
   - component: {fileID: 1283549412692984124}
   - component: {fileID: 1283549412692984123}
+  - component: {fileID: 8773536848334286156}
   m_Layer: 0
-  m_Name: pathogen_test
-  m_TagString: Untagged
+  m_Name: Pathogen
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,3 +115,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.2
   stoppingDistance: 1
+--- !u!58 &8773536848334286156
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283549412692984122}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.835

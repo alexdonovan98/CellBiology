@@ -26,4 +26,15 @@ public class PlayerController : MonoBehaviour
     {
         rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
     }
+
+    void OnTriggerEnter2D(Collider2D other) {
+        if(other.CompareTag("Enemy")){
+            DestroyPlayer();
+        }
+    }
+
+    void DestroyPlayer() {
+
+        Destroy(gameObject);
+    }
 }
