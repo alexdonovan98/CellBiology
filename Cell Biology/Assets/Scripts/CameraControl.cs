@@ -11,12 +11,14 @@ public class CameraControl : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
 
-        offset = transform.position - player.transform.position;
+        if (player){
+            offset = transform.position - player.transform.position;
+        }
     }
 
     void LateUpdate()
     {
-        if (player != null)
+        if (player)
         {
             transform.position = player.transform.position + offset;
         }
@@ -24,9 +26,9 @@ public class CameraControl : MonoBehaviour
         else
         {
             player = GameObject.FindGameObjectWithTag("Player");
-
-            offset = transform.position - player.transform.position;
-
+            if (player) {
+                offset = transform.position - player.transform.position;
+            }
         }
 
 

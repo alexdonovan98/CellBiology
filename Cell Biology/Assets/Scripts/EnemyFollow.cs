@@ -18,8 +18,10 @@ public class EnemyFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(transform.position, target.position) > stoppingDistance){
-        transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        if (GameObject.FindGameObjectWithTag("Player")) {
+            if (Vector2.Distance(transform.position, target.position) > stoppingDistance){
+            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            }
         }
     }
 }
