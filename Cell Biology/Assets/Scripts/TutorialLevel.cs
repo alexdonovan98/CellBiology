@@ -15,14 +15,20 @@ public class TutorialLevel : MonoBehaviour
     private GameObject[] pathogenInstances;
     private int numPath = 0;
     public int state = 0;
+    public GameObject arrow_keys;
+    public GameObject directions1;
+    public GameObject directions2;
 
 
     private void Start()
     {
         pathogenInstances = new GameObject[30];
-       }
+        arrow_keys = GameObject.Find("Arrow Keys");
+        directions1 = GameObject.Find("Directions1");
+        directions2 = GameObject.Find("Directions2");
+    }
 
-void Update()
+    void Update()
     {
         timeLeft -= Time.deltaTime;
         if (timeLeft < 0)
@@ -30,11 +36,13 @@ void Update()
             if (state == 0)
             {
                 GameObject player_inst = Instantiate(player, new Vector3(0, 0, 0), Quaternion.identity);
-                timeLeft += 10;
+                timeLeft += 4;
 
             }
             else if (state > 0 && state < 3)
             {
+                directions2.GetComponent<Canvas>().sortingLayerName = "Text";
+
                 pathogenInstances[numPath] = Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3(1, 1, 0)), Quaternion.identity);
                 pathogenInstances[numPath+1] = Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3(0, 1, 0)), Quaternion.identity);
                 pathogenInstances[numPath+2] = Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3(1, 0, 0)), Quaternion.identity);
@@ -44,6 +52,8 @@ void Update()
                 {
                     pathogenInstances[i].GetComponent<EnemyFollow>().speed += 0.2f;
                 }
+                arrow_keys.GetComponent<SpriteRenderer>().sortingLayerName = "Hidden";
+                directions1.GetComponent<Canvas>().sortingLayerName = "Hidden";
                 timeLeft += 10;
             }
             else if(state == 3)
@@ -79,7 +89,7 @@ void Update()
             state++;
 
         }
-        else if(state > 0)
+        else if(state > 1)
             UpdateCountdown(timeLeft);
 
     }
