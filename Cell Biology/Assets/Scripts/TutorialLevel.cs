@@ -4,10 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Threading;
 using UnityEngine.SceneManagement;
+using System;
 
 public class TutorialLevel : MonoBehaviour
 {
-    public float timeLeft = 10.0f;
+    public float timeLeft = 2.0f;
     public Text countdown;
     public GameObject player;
     public GameObject pathogen;
@@ -66,21 +67,23 @@ void Update()
                 numPath += 15;
                 for (int i = 0; i < numPath; i++)
                 {
-                    pathogenInstances[i].GetComponent<EnemyFollow>().speed += 0.8f;
+                    pathogenInstances[i].GetComponent<EnemyFollow>().speed += 0.4f;
                 }
                 timeLeft += 15;
 
             }
             else if(state == 4)
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                SceneManager.LoadScene("WinScreen");
             }
             state++;
 
         }
-        else
+        else if(state > 0)
             UpdateCountdown(timeLeft);
+
     }
+
 
     private void UpdateCountdown(float totalSeconds)
     {
