@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1283549412692984124}
   - component: {fileID: 1283549412692984123}
   - component: {fileID: 8773536848334286156}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Pathogen
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb045a576ac58784bb95759dbf2dc0d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.2
+  speed: 2
   stoppingDistance: 1
 --- !u!58 &8773536848334286156
 CircleCollider2D:
