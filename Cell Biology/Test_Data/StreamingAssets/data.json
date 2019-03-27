@@ -1,0 +1,85 @@
+{
+    "allRoundData": [{
+        "name": "Animals",
+        "timeLimitInSeconds": 20,
+        "pointsAddedForCorrectAnswer": 10,
+        "questions": [{
+            "questionText": "Lions are carnivores: true or false?",
+            "answers": [{
+                "answerText": "True",
+                "isCorrect": true
+            }, {
+                "answerText": "False",
+                "isCorrect": false
+            }]
+        }, {
+            "questionText": "What do frogs eat?",
+            "answers": [{
+                "answerText": "Pizza",
+                "isCorrect": false
+            }, {
+                "answerText": "Flies",
+                "isCorrect": true
+            }]
+        }, {
+            "questionText": "Where do mice live?",
+            "answers": [{
+                "answerText": "In the sea",
+                "isCorrect": false
+            }, {
+                "answerText": "On the moon",
+                "isCorrect": false
+            }, {
+                "answerText": "On land",
+                "isCorrect": true
+            }, {
+                "answerText": "In a tree",
+                "isCorrect": false
+            }]
+        }]
+    }]
+}
+
+{
+    "mitosisRoundData": [{
+        "name": "Prophase",
+        "pointsAddedForCorrectAnswer": 5,
+        "questions": [{
+            "questionText": "What is the most crucial part of the cell to segregate into the two daughter cells?",
+            "answers": [{
+                    "answerText": "The energy-producing mitochondria?",
+                    "isCorrect": false
+            }, {
+                    "answerText": "The genetic material in the nucleus (DNA)?",
+                    "isCorrect": true
+            },
+                {
+                    "answerText": "The protein- and lipid-manufacturing endoplasmic reticulum?",
+                    "isCorrect": false
+            },
+                {
+                    "answerText": "The protein-translating ribosomes?",
+                    "isCorrect": false
+            },
+                {
+                    "answerText": "The cell-surface adhesions?",
+                    "isCorrect": false
+            }]
+        }, {
+            "questionText": "Where are microtubules in the cell?",
+            "answers": [{
+                "answerText": "Periphery - “this is the actin-rich cortex”",
+                "isCorrect": false
+            }, {
+                "answerText": "Nucleus - “the nuclear envelope is scaffolded with lamins”",
+                "isCorrect": false
+            }, {
+                "answerText": "Aster near nucleus - “the centrosomes are the microtubule-organizing centers”",
+                "isCorrect": true
+            }, {
+                "answerText": "Cytoplasm - “non-polar, stable intermediate filaments reside in the cell body”",
+                "isCorrect": false
+            }]
+        }]
+    }]
+}
