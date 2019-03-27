@@ -35,7 +35,7 @@ public class TutorialLevel : MonoBehaviour
         { 
             if (state == 0)
             {
-                GameObject player_inst = Instantiate(player, new Vector3(0, 0, 0), Quaternion.identity);
+                GameObject player_inst = Instantiate(player, new Vector3(0, -8, 0), Quaternion.identity);
                 timeLeft += 4;
 
             }
@@ -43,10 +43,10 @@ public class TutorialLevel : MonoBehaviour
             {
                 directions2.GetComponent<Canvas>().sortingLayerName = "Text";
 
-                Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3((float)random.NextDouble(), Screen.height + 1, 0)), Quaternion.identity);
-                Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3((float)random.NextDouble(), Screen.height + 1, 0)), Quaternion.identity);
-                Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3((float)random.NextDouble(), Screen.height + 1, 0)), Quaternion.identity);
-                Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3((float)random.NextDouble(), Screen.height + 1, 0)), Quaternion.identity);
+                Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3((float)random.NextDouble(), 1.05f, 2)), Quaternion.identity);
+                Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3((float)random.NextDouble(), 1.05f, 2)), Quaternion.identity);
+                Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3((float)random.NextDouble(), 1.05f, 2)), Quaternion.identity);
+                Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3((float)random.NextDouble(), 1.05f, 2)), Quaternion.identity);
 
                 /* numPath += 4;
                 for (int i = 0; i < numPath; i++)

@@ -281,9 +281,9 @@ MonoBehaviour:
   pathogen: {fileID: 1283549412692984122, guid: 1289e08e5031f44e0b5d0243b91fa22f,
     type: 3}
   state: 0
-  arrow_keys: {fileID: 0}
-  directions1: {fileID: 0}
-  directions2: {fileID: 0}
+  arrow_keys: {fileID: 249728865}
+  directions1: {fileID: 1685499888}
+  directions2: {fileID: 1066454153}
 --- !u!1 &450791044
 GameObject:
   m_ObjectHideFlags: 0
