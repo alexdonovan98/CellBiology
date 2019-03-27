@@ -95,7 +95,7 @@ public class Level1Test : MonoBehaviour
                 //SceneManager.LoadScene("WinScreen");
 
                 //Time.timeScale = 0f;
-                SceneManager.LoadScene("Questions");
+                //SceneManager.LoadScene("Questions");
             }
             state++;
 
