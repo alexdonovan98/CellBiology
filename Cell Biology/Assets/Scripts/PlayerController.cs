@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
         if (current_scene.name == "TutorialLevel") {
             SceneManager.LoadScene("Restart");
         } else {
-            SceneManager.LoadScene("Questions");
+            SceneManager.LoadScene("Question1");
         }
 
     }
