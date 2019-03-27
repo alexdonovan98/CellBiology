@@ -123,8 +123,8 @@ GameObject:
   - component: {fileID: 844006438}
   - component: {fileID: 844006437}
   - component: {fileID: 844006436}
-  - component: {fileID: 844006435}
   - component: {fileID: 844006439}
+  - component: {fileID: 844006435}
   m_Layer: 0
   m_Name: pathogen_test
   m_TagString: Enemy
@@ -141,11 +141,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 844006434}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb045a576ac58784bb95759dbf2dc0d8, type: 3}
+  m_Script: {fileID: 11500000, guid: ce8dccce42fef6a4c927084707364316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.2
-  stoppingDistance: 1
+  speed: 3
 --- !u!95 &844006436
 Animator:
   serializedVersion: 3
@@ -221,7 +220,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 844006434}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.396, y: -3.604, z: 0}
+  m_LocalPosition: {x: 1.72, y: 7.14, z: 0}
   m_LocalScale: {x: 0.34, y: 0.34, z: 0.34}
   m_Children: []
   m_Father: {fileID: 0}

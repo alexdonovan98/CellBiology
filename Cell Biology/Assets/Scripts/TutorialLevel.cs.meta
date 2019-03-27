@@ -7,14 +7,11 @@ MonoImporter:
   - countdown: {instanceID: 0}
   - player: {fileID: 4723768775340805128, guid: 6b723b08b79c64776a928205736f34b6,
       type: 3}
-  - pathogen1: {fileID: 1283549412692984122, guid: 1289e08e5031f44e0b5d0243b91fa22f,
+  - pathogen: {fileID: 1283549412692984122, guid: 1289e08e5031f44e0b5d0243b91fa22f,
       type: 3}
-  - pathogen2: {fileID: 1283549412692984122, guid: 1289e08e5031f44e0b5d0243b91fa22f,
-      type: 3}
-  - pathogen3: {fileID: 1283549412692984122, guid: 1289e08e5031f44e0b5d0243b91fa22f,
-      type: 3}
-  - pathogen4: {fileID: 1283549412692984122, guid: 1289e08e5031f44e0b5d0243b91fa22f,
-      type: 3}
+  - arrow_keys: {instanceID: 0}
+  - directions1: {instanceID: 0}
+  - directions2: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

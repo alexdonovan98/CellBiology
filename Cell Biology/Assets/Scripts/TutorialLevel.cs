@@ -18,7 +18,7 @@ public class TutorialLevel : MonoBehaviour
     public GameObject arrow_keys;
     public GameObject directions1;
     public GameObject directions2;
-
+    private System.Random random = new System.Random();
 
     private void Start()
     {
@@ -43,20 +43,21 @@ public class TutorialLevel : MonoBehaviour
             {
                 directions2.GetComponent<Canvas>().sortingLayerName = "Text";
 
-                pathogenInstances[numPath] = Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3(1, 1, 0)), Quaternion.identity);
-                pathogenInstances[numPath+1] = Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3(0, 1, 0)), Quaternion.identity);
-                pathogenInstances[numPath+2] = Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3(1, 0, 0)), Quaternion.identity);
-                pathogenInstances[numPath+3] = Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)), Quaternion.identity);
-                numPath += 4;
+                Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3((float)random.NextDouble(), Screen.height + 1, 0)), Quaternion.identity);
+                Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3((float)random.NextDouble(), Screen.height + 1, 0)), Quaternion.identity);
+                Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3((float)random.NextDouble(), Screen.height + 1, 0)), Quaternion.identity);
+                Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3((float)random.NextDouble(), Screen.height + 1, 0)), Quaternion.identity);
+
+                /* numPath += 4;
                 for (int i = 0; i < numPath; i++)
                 {
                     pathogenInstances[i].GetComponent<EnemyFollow>().speed += 0.2f;
-                }
+                } */
                 arrow_keys.GetComponent<SpriteRenderer>().sortingLayerName = "Hidden";
                 directions1.GetComponent<Canvas>().sortingLayerName = "Hidden";
                 timeLeft += 10;
             }
-            else if(state == 3)
+            /* else if(state == 3)
             {
                 pathogenInstances[numPath] = Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3(1, 1, 0)), Quaternion.identity);
                 pathogenInstances[numPath + 1] = Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3(0, 1, 0)), Quaternion.identity);
@@ -81,7 +82,7 @@ public class TutorialLevel : MonoBehaviour
                 }
                 timeLeft += 15;
 
-            }
+            } */
             else if(state == 4)
             {
                 SceneManager.LoadScene("WinScreen");
