@@ -9,4 +9,9 @@ public class RestartScript : MonoBehaviour
     {
         SceneManager.LoadScene("TutorialLevel");
     }
+
+    public void ToLevel1()
+    {
+        SceneManager.LoadScene("Level1");
+    }
 }

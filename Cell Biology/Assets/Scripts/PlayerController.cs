@@ -37,7 +37,12 @@ public class PlayerController : MonoBehaviour
     void DestroyPlayer() {
 
         Destroy(gameObject);
-        SceneManager.LoadScene("Restart");
+        Scene current_scene = SceneManager.GetActiveScene();
+        if (current_scene.name == "TutorialLevel") {
+            SceneManager.LoadScene("Restart");
+        } else {
+            SceneManager.LoadScene("Questions");
+        }
 
     }
 }
