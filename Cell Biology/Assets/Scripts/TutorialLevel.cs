@@ -13,7 +13,7 @@ public class TutorialLevel : MonoBehaviour
     public GameObject player;
     public GameObject pathogen;
     private GameObject[] pathogenInstances;
-    private int numPath = 0;
+    //private int numPath = 0;
     public int state = 0;
     public GameObject arrow_keys;
     public GameObject directions1;

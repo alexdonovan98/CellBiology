@@ -1388,7 +1388,6 @@ GameObject:
   - component: {fileID: 5642641455568588985}
   - component: {fileID: 5642641455568588982}
   - component: {fileID: 5642641455568588984}
-  - component: {fileID: 5642641455568588983}
   - component: {fileID: 5642641455568588986}
   m_Layer: 5
   m_Name: Answer6
@@ -1426,18 +1425,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &5642641455568588983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5642641455568588981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dd472d33554947f0aef33b1deef521b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &5642641455568588984
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1935,7 +1922,6 @@ GameObject:
   - component: {fileID: 5642641456414248996}
   - component: {fileID: 5642641456414249003}
   - component: {fileID: 5642641456414249004}
-  - component: {fileID: 5642641456414249002}
   - component: {fileID: 5642641456414249005}
   m_Layer: 5
   m_Name: Answer2
@@ -1964,18 +1950,6 @@ RectTransform:
   m_AnchoredPosition: {x: 205, y: -30}
   m_SizeDelta: {x: 130, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5642641456414249002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5642641456414249000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dd472d33554947f0aef33b1deef521b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5642641456414249003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2084,7 +2058,6 @@ GameObject:
   - component: {fileID: 5642641456474670714}
   - component: {fileID: 5642641456474670709}
   - component: {fileID: 5642641456474670713}
-  - component: {fileID: 5642641456474670712}
   - component: {fileID: 5642641456474670715}
   m_Layer: 5
   m_Name: Answer3
@@ -2113,18 +2086,6 @@ RectTransform:
   m_AnchoredPosition: {x: 335, y: -30}
   m_SizeDelta: {x: 130, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5642641456474670712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5642641456474670710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dd472d33554947f0aef33b1deef521b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &5642641456474670713
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2291,7 +2252,6 @@ GameObject:
   - component: {fileID: 5642641457086552714}
   - component: {fileID: 5642641457086552709}
   - component: {fileID: 5642641457086552713}
-  - component: {fileID: 5642641457086552712}
   - component: {fileID: 5642641457086552715}
   m_Layer: 5
   m_Name: Answer5
@@ -2320,18 +2280,6 @@ RectTransform:
   m_AnchoredPosition: {x: 595, y: -30}
   m_SizeDelta: {x: 130, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5642641457086552712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5642641457086552710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dd472d33554947f0aef33b1deef521b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &5642641457086552713
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2427,7 +2375,6 @@ GameObject:
   - component: {fileID: 5642641457348041654}
   - component: {fileID: 5642641457348041657}
   - component: {fileID: 5642641457348041661}
-  - component: {fileID: 5642641457348041660}
   - component: {fileID: 5642641457348041662}
   m_Layer: 5
   m_Name: Answer4
@@ -2456,18 +2403,6 @@ RectTransform:
   m_AnchoredPosition: {x: 465, y: -30}
   m_SizeDelta: {x: 130, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5642641457348041660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5642641457348041658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dd472d33554947f0aef33b1deef521b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &5642641457348041661
 BoxCollider2D:
   m_ObjectHideFlags: 0

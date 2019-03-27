@@ -6,7 +6,6 @@ public class EnemyLinearPath : MonoBehaviour
 {
     public float speed;
 
-
     // Update is called once per frame
     void Update()
     {
@@ -15,6 +14,10 @@ public class EnemyLinearPath : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Player")){
+            DestroySelf();
+        }
+        else if (other.gameObject.name == "BottomCollider")
+        {
             DestroySelf();
         }
     }

@@ -300,13 +300,12 @@ MonoBehaviour:
   timeLeft: 2
   countdown: {fileID: 1266455003}
   player: {fileID: 4723768775340805128, guid: 6b723b08b79c64776a928205736f34b6, type: 3}
-  pathogen: {fileID: 1283549412692984122, guid: 1289e08e5031f44e0b5d0243b91fa22f,
+  pathogen: {fileID: 8650741667029819340, guid: 68efac30a6477491ba89646f1bf4ef18,
     type: 3}
   state: 0
   arrow_keys: {fileID: 249728865}
   directions1: {fileID: 1685499888}
   directions2: {fileID: 1066454153}
-  questions: {fileID: 0}
 --- !u!1 &1066454153
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,9 +417,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1079912359}
   - component: {fileID: 1079912355}
-  - component: {fileID: 1079912354}
   - component: {fileID: 1079912358}
-  - component: {fileID: 1079912356}
   - component: {fileID: 1079912357}
   m_Layer: 0
   m_Name: Main Camera
@@ -429,14 +426,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1079912354
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1079912353}
-  m_Enabled: 1
 --- !u!20 &1079912355
 Camera:
   m_ObjectHideFlags: 0
@@ -479,40 +468,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &1079912356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1079912353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.16037738, g: 0.13995196, b: 0.13995196, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 1
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 
 --- !u!114 &1079912357
 MonoBehaviour:
   m_ObjectHideFlags: 0

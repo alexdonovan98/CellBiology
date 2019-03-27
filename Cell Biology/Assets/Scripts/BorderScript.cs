@@ -26,9 +26,11 @@ public class BorderScript : MonoBehaviour
             valPair.Value.gameObject.AddComponent<BoxCollider2D>(); //Add our colliders. Remove the "2D", if you would like 3D colliders.
             valPair.Value.name = valPair.Key + "Collider"; //Set the object's name to it's "Key" name, and take on "Collider".  i.e: TopCollider
             valPair.Value.parent = transform; //Make the object a child of whatever object this script is on (preferably the camera)
-
-            if (valPair.Key == "Left" || valPair.Key == "Right") //Scale the object to the width and height of the screen, using the world-space values calculated earlier
+            if (valPair.Key == "Left" || valPair.Key == "Right")
+            { //Scale the object to the width and height of the screen, using the world-space values calculated earlier
                 valPair.Value.localScale = new Vector3(colThickness, screenSize.y * 2, colThickness);
+                valPair.Value.tag = "Border";
+            }
             else
                 valPair.Value.localScale = new Vector3(screenSize.x * 2, colThickness, colThickness);
         }
