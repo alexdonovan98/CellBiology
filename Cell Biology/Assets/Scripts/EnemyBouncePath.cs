@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; 
 
 public class EnemyBouncePath : MonoBehaviour
 {
@@ -37,7 +38,10 @@ public class EnemyBouncePath : MonoBehaviour
 
         else if (other.gameObject.name == "BottomCollider")
         {
+            int damageCount = int.Parse(GameObject.Find("DamageCounter").GetComponent<Text>().text);
             DestroySelf();
+            damageCount++;
+            GameObject.Find("DamageCounter").GetComponent<Text>().text = damageCount.ToString();
         }
         else if (other.gameObject.tag == "Player")
         {
