@@ -15,6 +15,10 @@ public class EnemyBouncePath : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         slope = (float)random.NextDouble() * Time.deltaTime * 20;
+        int random_direction = random.Next(0, 2);
+        if (random_direction == 0) {
+            slope = -slope;
+        }
     }
 
     void Update()
