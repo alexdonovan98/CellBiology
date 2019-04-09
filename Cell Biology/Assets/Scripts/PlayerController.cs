@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), 0); // move up/down/left/right by one
+        Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), 0); // move left/right by one
         moveVelocity = moveInput.normalized * speed;
     }
 

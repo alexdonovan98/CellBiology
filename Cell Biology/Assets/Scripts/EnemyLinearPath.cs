@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyLinearPath : MonoBehaviour
 {
@@ -18,7 +19,11 @@ public class EnemyLinearPath : MonoBehaviour
         }
         else if (other.gameObject.name == "BottomCollider")
         {
+            int damageCount = int.Parse(GameObject.Find("DamageCounter").GetComponent<Text>().text);
             DestroySelf();
+            damageCount++;
+            GameObject.Find("DamageCounter").GetComponent<Text>().text = damageCount.ToString();
+
         }
     }
 
