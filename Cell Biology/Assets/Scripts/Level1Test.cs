@@ -46,7 +46,7 @@ public class Level1Test : MonoBehaviour
                 player_inst = Instantiate(player, new Vector3(0, -8, 0), Quaternion.identity);
                 timeLeft += 4;
             }
-            else if (state > 0 && state < 7)
+            else if (state > 0 && state < 3)
             {
                 directions2.GetComponent<Canvas>().sortingLayerName = "Text";
 
@@ -61,19 +61,17 @@ public class Level1Test : MonoBehaviour
                 directions1.GetComponent<Canvas>().sortingLayerName = "Hidden";
                 
             } 
-            else if(state == 7)
+            else if(state == 3)
             {
                 SceneManager.LoadScene("Question1");
             }
             state++;
             //Debug.Log("State change: " + state);
         }
-        else if (state == 2 || state == 4 || state == 6) {
+        else if (state == 2) {
             float frequency = 0.0f;
             last_spawned += Time.deltaTime;
-            if (state == 2) {
-                frequency = 2.0f;
-            }
+            frequency = 2.0f;
 
             if (last_spawned >= frequency) {
                 if (_next_spawn == 0) {
