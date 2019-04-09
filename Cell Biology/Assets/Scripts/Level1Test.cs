@@ -11,7 +11,8 @@ public class Level1Test : MonoBehaviour
     public float timeLeft = 2.0f;
     public Text countdown;
     public GameObject player;
-    public GameObject pathogen;
+    public GameObject bouncing_pathogen;
+    public GameObject linear_pathogen;
     private GameObject[] pathogenInstances;
     //private int numPath = 0;
     public int state = 0;
@@ -20,6 +21,11 @@ public class Level1Test : MonoBehaviour
     public GameObject directions2;
     private System.Random random = new System.Random();
 
+    enum Pathogen {bouncing, linear};
+    private int _next_spawn = 0;
+    private GameObject player_inst;
+    private float last_spawned = 0.0f;
+    private float breakBetweenWaves = 10.0f;
 
     private void Start()
     {
@@ -37,73 +43,51 @@ public class Level1Test : MonoBehaviour
         { 
             if (state == 0)
             {
-                GameObject player_inst = Instantiate(player, new Vector3(0, -8, 0), Quaternion.identity);
+                player_inst = Instantiate(player, new Vector3(0, -8, 0), Quaternion.identity);
                 timeLeft += 4;
-
             }
-            else if (state > 0 && state < 3)
+            else if (state > 0 && state < 7)
             {
                 directions2.GetComponent<Canvas>().sortingLayerName = "Text";
 
+                if (state == 1) {
+                    player_inst.GetComponent<PlayerController>().SetLength(10);
+                    timeLeft += 20.0f;
+                } else if (state == 2) {
+                    timeLeft += breakBetweenWaves;
+                }
 
-                //pathogenInstances[numPath] = Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3(1, 1, 0)), Quaternion.identity);
-                //pathogenInstances[numPath+1] = Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3(0, 1, 0)), Quaternion.identity);
-                //pathogenInstances[numPath+2] = Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3(1, 0, 0)), Quaternion.identity);
-                //pathogenInstances[numPath+3] = Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)), Quaternion.identity);
-
-                Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3((float)random.NextDouble(), 1.05f, 2)), Quaternion.identity);
-                Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3((float)random.NextDouble(), 1.05f, 2)), Quaternion.identity);
-                Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3((float)random.NextDouble(), 1.05f, 2)), Quaternion.identity);
-                Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3((float)random.NextDouble(), 1.05f, 2)), Quaternion.identity);
-
-                //numPath += 4;
-                    //for (int i = 0; i < numPath; i++)
-                    //{
-                    //    pathogenInstances[i].GetComponent<EnemyFollow>().speed += 0.2f;
-                    //}
                 arrow_keys.GetComponent<SpriteRenderer>().sortingLayerName = "Hidden";
                 directions1.GetComponent<Canvas>().sortingLayerName = "Hidden";
-                timeLeft += 10;
-            }
-
-            else if(state == 3)
+                
+            } 
+            else if(state == 7)
             {
-                //pathogenInstances[numPath] = Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3(1, 1, 0)), Quaternion.identity);
-                //pathogenInstances[numPath + 1] = Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3(0, 1, 0)), Quaternion.identity);
-                //pathogenInstances[numPath + 2] = Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3(1, 0, 0)), Quaternion.identity);
-                //pathogenInstances[numPath + 3] = Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)), Quaternion.identity);
-                //pathogenInstances[numPath + 4] = Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3(1, 0.5f, 0)), Quaternion.identity);
-                //pathogenInstances[numPath + 5] = Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3(0, 0.5f, 0)), Quaternion.identity);
-                //pathogenInstances[numPath + 6] = Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0, 0)), Quaternion.identity);
-                //pathogenInstances[numPath + 7] = Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 1, 0)), Quaternion.identity);
-                //pathogenInstances[numPath + 8] = Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3(0.25f, 0, 0)), Quaternion.identity);
-                //pathogenInstances[numPath + 9] = Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3(0.75f, 1, 0)), Quaternion.identity);
-                //pathogenInstances[numPath + 10] = Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3(1, 0.25f, 0)), Quaternion.identity);
-                //pathogenInstances[numPath + 11] = Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3(1, 0.75f, 0)), Quaternion.identity);
-                //pathogenInstances[numPath + 12] = Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3(0.75f, 1, 0)), Quaternion.identity);
-                //pathogenInstances[numPath + 13] = Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3(0.25f, 1, 0)), Quaternion.identity);
-                //pathogenInstances[numPath + 14] = Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3(0, 0.25f, 0)), Quaternion.identity);
-                //pathogenInstances[numPath + 15] = Instantiate(pathogen, Camera.main.ViewportToWorldPoint(new Vector3(0, 0.75f, 0)), Quaternion.identity);
-                //numPath += 15;
-                //for (int i = 0; i < numPath; i++)
-                //{
-                //    pathogenInstances[i].GetComponent<EnemyFollow>().speed += 0.4f;
-                //}
-                //timeLeft += 15;
-
-            }
-            else if(state == 4)
-            {
-                //SceneManager.LoadScene("WinScreen");
-
-                //Time.timeScale = 0f;
                 SceneManager.LoadScene("Question1");
             }
             state++;
-
+            //Debug.Log("State change: " + state);
         }
-        else if(state > 1)
-            UpdateCountdown(timeLeft);
+        else if (state == 2 || state == 4 || state == 6) {
+            float frequency = 0.0f;
+            last_spawned += Time.deltaTime;
+            if (state == 2) {
+                frequency = 2.0f;
+            }
+
+            if (last_spawned >= frequency) {
+                if (_next_spawn == 0) {
+                    SpawnPathogen(Pathogen.bouncing);
+                    _next_spawn = 1;
+                } else {
+                    SpawnPathogen(Pathogen.linear);
+                    _next_spawn = 0;
+                }
+                last_spawned = 0.0f;
+            }
+        } else {
+            //UpdateCountdown(timeLeft);
+            }
 
     }
 
@@ -122,5 +106,13 @@ public class Level1Test : MonoBehaviour
         }
 
         countdown.text = "Time Remaining: " + minutes.ToString("00") + ":" + seconds.ToString("00");
+    }
+
+    private void SpawnPathogen(Pathogen p) {
+        if (p == Pathogen.linear) {
+            Instantiate(linear_pathogen, Camera.main.ViewportToWorldPoint(new Vector3((float)random.NextDouble(), 1.05f, 2)), Quaternion.identity);
+        } else if (p == Pathogen.bouncing) {
+            Instantiate(bouncing_pathogen, Camera.main.ViewportToWorldPoint(new Vector3((float)random.NextDouble(), 1.05f, 2)), Quaternion.identity);
+        }
     }
 }
