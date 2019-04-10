@@ -33,8 +33,20 @@ public class Level1Test : MonoBehaviour
         arrow_keys = GameObject.Find("Arrow Keys");
         directions1 = GameObject.Find("Directions1");
         directions2 = GameObject.Find("Directions2");
+        player_inst = Instantiate(player, new Vector3(0, -8, 0), Quaternion.identity);
+        if (GlobalControl.Instance.Q1Score < 3)
+        {
+            player_inst.GetComponent<PlayerController>().SetLength(5);
+        }
+        else if(GlobalControl.Instance.Q1Score > 15)
+        {
+            player_inst.GetComponent<PlayerController>().SetLength(10);
 
-
+        }
+        else
+        {
+            player_inst.GetComponent<PlayerController>().SetLength((int)GlobalControl.Instance.Q1Score);
+        }
     }
 
     void Update()
@@ -44,7 +56,6 @@ public class Level1Test : MonoBehaviour
         { 
             if (state == 0)
             {
-                player_inst = Instantiate(player, new Vector3(0, -8, 0), Quaternion.identity);
                 timeLeft += 4;
             }
             else if (state > 0 && state < 3)
@@ -52,15 +63,7 @@ public class Level1Test : MonoBehaviour
                 directions2.GetComponent<Canvas>().sortingLayerName = "Text";
 
                 if (state == 1) {
-                    Debug.Log((int)GlobalControl.Instance.Q1Score);
-                    if(GlobalControl.Instance.Q1Score < 3)
-                    {
-                        player_inst.GetComponent<PlayerController>().SetLength(5);
-                    }
-                    else
-                    {
-                        player_inst.GetComponent<PlayerController>().SetLength((int)GlobalControl.Instance.Q1Score);
-                    }
+
                     timeLeft += 20.0f;
                 } else if (state == 2) {
                     timeLeft += breakBetweenWaves;
