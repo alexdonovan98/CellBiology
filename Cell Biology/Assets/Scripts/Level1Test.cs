@@ -34,6 +34,7 @@ public class Level1Test : MonoBehaviour
         directions1 = GameObject.Find("Directions1");
         directions2 = GameObject.Find("Directions2");
 
+
     }
 
     void Update()
@@ -51,7 +52,15 @@ public class Level1Test : MonoBehaviour
                 directions2.GetComponent<Canvas>().sortingLayerName = "Text";
 
                 if (state == 1) {
-                    player_inst.GetComponent<PlayerController>().SetLength(10);
+                    Debug.Log((int)GlobalControl.Instance.Q1Score);
+                    if(GlobalControl.Instance.Q1Score < 3)
+                    {
+                        player_inst.GetComponent<PlayerController>().SetLength(5);
+                    }
+                    else
+                    {
+                        player_inst.GetComponent<PlayerController>().SetLength((int)GlobalControl.Instance.Q1Score);
+                    }
                     timeLeft += 20.0f;
                 } else if (state == 2) {
                     timeLeft += breakBetweenWaves;
@@ -63,6 +72,7 @@ public class Level1Test : MonoBehaviour
             } 
             else if(state == 3)
             {
+                GlobalControl.Instance.totalDamage = int.Parse(GameObject.Find("DamageCounter").GetComponent<Text>().text);
                 SceneManager.LoadScene("Question1");
             }
             state++;
