@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
@@ -62,6 +63,8 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("Restart");
         } else {
             SceneManager.LoadScene("Question1");
+            GlobalControl.Instance.totalDamage = int.Parse(GameObject.Find("DamageCounter").GetComponent<Text>().text);
+
         }
 
     }

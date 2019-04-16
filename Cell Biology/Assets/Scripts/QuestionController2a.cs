@@ -4,11 +4,10 @@ using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using System;
 
-public class QuestionController1 : MonoBehaviour
+public class QuestionController2a : MonoBehaviour
 {
     public Text timeDisplay;
     private float currentTime;
-    public GameObject answers;
     public static int score1;
     public GameObject questionDisplay;
     public GameObject roundEndDisplay;
@@ -18,7 +17,7 @@ public class QuestionController1 : MonoBehaviour
     void Start()
     {
         score1 = 0;
-        currentTime = 0;                                
+        currentTime = 0;
         UpdateTimeDisplay();
     }
 
@@ -26,11 +25,6 @@ public class QuestionController1 : MonoBehaviour
     {
         currentTime += Time.deltaTime;
         UpdateTimeDisplay();
-        if(answers.transform.childCount == 0)
-        {
-            EndRound();
-        }
-
     }
 
     private void UpdateTimeDisplay()
@@ -47,8 +41,12 @@ public class QuestionController1 : MonoBehaviour
 
     public void NextLevel()
     {
-        GlobalControl.Instance.Q1Score = score1;
-        SceneManager.LoadScene("Level1");
+        //SceneManager.LoadScene("Level2");
+    }
+
+    private void CorrectPress()
+    {
+
     }
 
 }

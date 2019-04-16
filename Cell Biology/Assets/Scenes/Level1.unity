@@ -285,7 +285,7 @@ MonoBehaviour:
   state: 0
   arrow_keys: {fileID: 249728865}
   directions1: {fileID: 1685499888}
-  directions2: {fileID: 0}
+  directions2: {fileID: 837919040}
 --- !u!1 &354715980
 GameObject:
   m_ObjectHideFlags: 0

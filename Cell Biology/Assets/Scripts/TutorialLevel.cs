@@ -47,16 +47,19 @@ public class TutorialLevel : MonoBehaviour
 
                 if (state == 1) {
                     player_inst.GetComponent<PlayerController>().SetLength(10);
+                    player_inst.transform.position = new Vector3(0, -8, 0);
                     timeLeft += 7.5f;
                 } else if (state == 2) {
                     timeLeft += breakBetweenWaves;
                 } else if (state == 3) {
-                    player_inst.GetComponent<PlayerController>().SetLength(15);
+                    player_inst.GetComponent<PlayerController>().SetLength(10);
+                    player_inst.transform.position = new Vector3(0, -8, 0);
                     timeLeft += 10.0f;
                 } else if (state == 4) {
                     timeLeft += breakBetweenWaves;
                 } else if (state == 5) {
                     player_inst.GetComponent<PlayerController>().SetLength(5);
+                    player_inst.transform.position = new Vector3(0, -8, 0);
                     timeLeft += 2.5f;
                 } else if (state == 6) {
                     timeLeft += breakBetweenWaves;
