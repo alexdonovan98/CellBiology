@@ -27,6 +27,7 @@ public class Level1Test : MonoBehaviour
     private float last_spawned = 0.0f;
     private float breakBetweenWaves = 10.0f;
 
+
     private void Start()
     {
         pathogenInstances = new GameObject[30];

@@ -603,7 +603,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Avoid the pathogens!
+  m_Text: Stop the pathogens from reaching the body!
 --- !u!222 &1066454157
 CanvasRenderer:
   m_ObjectHideFlags: 0
