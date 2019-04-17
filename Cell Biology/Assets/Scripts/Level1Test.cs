@@ -16,8 +16,7 @@ public class Level1Test : MonoBehaviour
     private GameObject[] pathogenInstances;
     //private int numPath = 0;
     public int state = 0;
-    public GameObject arrow_keys;
-    public GameObject directions1;
+   
     public GameObject directions2;
     private System.Random random = new System.Random();
 
@@ -31,8 +30,7 @@ public class Level1Test : MonoBehaviour
     private void Start()
     {
         pathogenInstances = new GameObject[30];
-        arrow_keys = GameObject.Find("Arrow Keys");
-        directions1 = GameObject.Find("Directions1");
+        
         directions2 = GameObject.Find("Directions2");
         player_inst = Instantiate(player, new Vector3(0, -8, 0), Quaternion.identity);
         if (GlobalControl.Instance.Q1Score < 3)
@@ -70,9 +68,7 @@ public class Level1Test : MonoBehaviour
                     timeLeft += breakBetweenWaves;
                 }
 
-                arrow_keys.GetComponent<SpriteRenderer>().sortingLayerName = "Hidden";
-                directions1.GetComponent<Canvas>().sortingLayerName = "Hidden";
-                
+                         
             } 
             else if(state == 3)
             {

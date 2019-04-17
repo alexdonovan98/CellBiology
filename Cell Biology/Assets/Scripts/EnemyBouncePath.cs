@@ -9,6 +9,8 @@ public class EnemyBouncePath : MonoBehaviour
     public float slope;
     private Transform target;
     private System.Random random = new System.Random();
+    private AudioSource src;
+
 
 
 
@@ -20,6 +22,7 @@ public class EnemyBouncePath : MonoBehaviour
         if (random_direction == 0) {
             slope = -slope;
         }
+        src = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -49,6 +52,7 @@ public class EnemyBouncePath : MonoBehaviour
         }
         else if (other.gameObject.tag == "Player")
         {
+            AudioSource.PlayClipAtPoint(src.clip, Camera.main.transform.position, 1f);
             DestroySelf();
         }
     }
