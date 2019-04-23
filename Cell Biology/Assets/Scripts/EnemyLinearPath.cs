@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class EnemyLinearPath : MonoBehaviour
 {
     public float speed;
-    private AudioSource src;
+    public AudioSource src;
 
     void Start()
     {

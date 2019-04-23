@@ -199,8 +199,6 @@ MonoBehaviour:
   linear_pathogen: {fileID: 1283549412692984122, guid: 1289e08e5031f44e0b5d0243b91fa22f,
     type: 3}
   state: 0
-  arrow_keys: {fileID: 0}
-  directions1: {fileID: 0}
   directions2: {fileID: 837919040}
 --- !u!1 &354715980
 GameObject:
@@ -237,7 +235,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 390, y: -117.49}
+  m_AnchoredPosition: {x: 390, y: -207}
   m_SizeDelta: {x: 234.18, y: 63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &354715982
@@ -338,7 +336,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 296, y: -117.49}
+  m_AnchoredPosition: {x: 298, y: -207}
   m_SizeDelta: {x: 371, y: 66.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &837919042
@@ -619,7 +617,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 230.00002}
+  m_AnchoredPosition: {x: 0, y: 199.88}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1476545113

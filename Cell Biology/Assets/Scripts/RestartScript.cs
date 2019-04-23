@@ -7,6 +7,11 @@ public class RestartScript : MonoBehaviour
 {
     public void OnMouseButton()
     {
+        SceneManager.LoadScene("Video");
+    }
+
+    public void ToTutorial()
+    {
         SceneManager.LoadScene("TutorialLevel");
     }
 
