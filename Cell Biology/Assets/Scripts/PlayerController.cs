@@ -24,9 +24,6 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //sprite_renderer = GetComponent<SpriteRenderer>();
-        //box_collider = GetComponent<BoxCollider2D>();
-        //rb = GetComponent<Rigidbody2D>();
         sprite_renderer.size = new Vector2(length * 6.55f, height);
         box_collider.size = new Vector2(length * 6.55f, height);
     }

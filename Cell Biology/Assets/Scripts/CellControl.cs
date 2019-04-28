@@ -8,16 +8,19 @@ public class CellControl : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 moveVelocity;
     private SpriteRenderer sprite_renderer;
-    private CircleCollider2D circle_collider;
+    private CompositeCollider2D composite_collider;
 
+
+    void Awake() {
+        sprite_renderer = GetComponent<SpriteRenderer>();
+        composite_collider = GetComponent<CompositeCollider2D>();
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        sprite_renderer = GetComponent<SpriteRenderer>();
-        circle_collider = GetComponent<CircleCollider2D>();
-        rb = GetComponent<Rigidbody2D>();
-        Physics2D.IgnoreCollision(transform.parent.GetComponent<BoxCollider2D>(), GetComponent<CircleCollider2D>());
+        //Physics2D.IgnoreCollision(transform.parent.GetComponent<BoxCollider2D>(), GetComponent<CircleCollider2D>());
 
     }
 
@@ -26,9 +29,9 @@ public class CellControl : MonoBehaviour
     {
         //Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), 0);
         //moveVelocity = moveInput.normalized * speed;
-        Vector3 direction = (transform.parent.position - transform.position).normalized;
+        //Vector3 direction = (transform.parent.position - transform.position).normalized;
 
-        rb.AddForce(rb.mass * (200 * direction));
+        //rb.AddForce(rb.mass * (200 * direction));
 
         //rb.AddForce((transform.parent.position - transform.position).normalized * 100 * Time.smoothDeltaTime);
         //        Debug.Log("parent:" + transform.parent.position);
@@ -48,7 +51,7 @@ public class CellControl : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             Destroy(gameObject);
-            GetComponentInParent<CellGroupScript>().UpdateGrid();
+            //GetComponentInParent<CellGroupScript>().UpdateGrid();
         }
     }
 }

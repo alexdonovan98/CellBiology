@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 3110864599487719252}
   - component: {fileID: 1488607031753016558}
   - component: {fileID: 8089850099476304521}
+  - component: {fileID: 495252365890733907}
+  - component: {fileID: 7114852174588980349}
   m_Layer: 5
   m_Name: CellGroupTest
   m_TagString: Player
@@ -96,7 +98,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 43bed0a953d734ef6b730a0c7e7c1ea9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -109,7 +111,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6329154341761220711}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -129,8 +131,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 1
-  m_UseAutoMass: 1
-  m_Mass: 3.303486
+  m_UseAutoMass: 0
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -152,3 +154,64 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+--- !u!61 &495252365890733907
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6329154341761220711}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 1
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.5499997, y: 6.5799994}
+    newSize: {x: 6.55, y: 6.5799994}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.5499997, y: 6.5799994}
+  m_EdgeRadius: 0
+--- !u!66 &7114852174588980349
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6329154341761220711}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 495252365890733907}
+    m_ColliderPaths:
+    - - X: 9825000
+        Y: 9869999
+      - X: -9825000
+        Y: 9869999
+      - X: -9825000
+        Y: -9869999
+      - X: 9825000
+        Y: -9869999
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 0.9825, y: 0.9869999}
+      - {x: -0.9825, y: 0.9869999}
+      - {x: -0.9825, y: -0.9869999}
+      - {x: 0.9825, y: -0.9869999}
+  m_VertexDistance: 0.0005
