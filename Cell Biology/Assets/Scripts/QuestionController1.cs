@@ -48,7 +48,7 @@ public class QuestionController1 : MonoBehaviour
     public void NextLevel()
     {
         GlobalControl.Instance.Q1Score = score1;
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Level2");
     }
 
 }

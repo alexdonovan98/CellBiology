@@ -193,8 +193,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numCells: 15
   player: {fileID: 4723768775340805128, guid: 6b723b08b79c64776a928205736f34b6, type: 3}
-  can_move_left: 1
-  can_move_right: 1
+  gridParent: {fileID: 517816662868340659, guid: 65136a387f385ae4cbe23d1638790f15,
+    type: 3}
 --- !u!1 &735194342
 GameObject:
   m_ObjectHideFlags: 0

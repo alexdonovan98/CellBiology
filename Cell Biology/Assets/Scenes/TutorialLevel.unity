@@ -284,6 +284,9 @@ MonoBehaviour:
   arrow_keys: {fileID: 249728865}
   directions1: {fileID: 1685499888}
   directions2: {fileID: 0}
+  numCells: 24
+  gridParent: {fileID: 517816662868340659, guid: 65136a387f385ae4cbe23d1638790f15,
+    type: 3}
 --- !u!1 &450791044
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,9 @@ public class CellGrid_Test : MonoBehaviour
     public int numCells;
     private int _num_left_to_spawn;
     public GameObject player;
+    public GameObject gridParent;
+
+    private GameObject grid_instance;
 
     private GameObject[,] cells;
 
@@ -27,19 +30,21 @@ public class CellGrid_Test : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        float spawn_x = -3.0f;
+        float spawn_x = -5.0f;
         float spawn_y = -8.0f;
+        grid_instance = Instantiate(gridParent, new Vector3(0, -8, 0), Quaternion.identity);
         for(int i = 0; i < _rows; i++) {
             for(int j = 0; j < _columns; j++) {
                 //Debug.Log(i + ", " + j);
                 if (_num_left_to_spawn > 0) {
                     cells[i,j] = Instantiate(player, new Vector3(spawn_x, spawn_y, 0), Quaternion.identity);
-                    spawn_x += 2.55f;
+                    cells[i,j].transform.parent = grid_instance.transform;
+                    spawn_x += 2.75f;
                     _num_left_to_spawn--;
                 }
             }
             spawn_y += 2.55f;
-            spawn_x = -3.0f;
+            spawn_x = -5.0f;
         }
     }
 

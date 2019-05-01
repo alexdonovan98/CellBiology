@@ -8,13 +8,16 @@ public class PlayerController : MonoBehaviour
 {
 
     public float speed;
-    public int length;
+    //public int length;
     private Rigidbody2D rb;
     private Vector2 moveVelocity; 
     private SpriteRenderer sprite_renderer;
     private BoxCollider2D box_collider;
     private float height;
     private float width;
+
+    public bool leftAble = true;
+    public bool rightAble = true;
 
     void Awake() {
 
@@ -31,35 +34,62 @@ public class PlayerController : MonoBehaviour
         //sprite_renderer = GetComponent<SpriteRenderer>();
         //box_collider = GetComponent<BoxCollider2D>();
         //rb = GetComponent<Rigidbody2D>();
-        sprite_renderer.size = new Vector2(length * width, height);
-        box_collider.size = new Vector2(length * width, height);
+        //sprite_renderer.size = new Vector2(length * width, height);
+        //box_collider.size = new Vector2(length * width, height);
+
+        sprite_renderer.size = new Vector2(width, height);
+        box_collider.size = new Vector2(width, height);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), 0); // move left/right by one
-        moveVelocity = moveInput.normalized * speed;
+        //Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), 0); // move left/right by one
+        //moveVelocity = moveInput.normalized * speed;
     }
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
+        //rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
     }
 
-    public void SetLength(int l) {
+    /* public void SetLength(int l) {
         length = l;
         sprite_renderer.size = new Vector2(length * width, height);
         box_collider.size = new Vector2(length * width, height);
-    }
+    } */
 
     void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Enemy")){
-            if (length > 1) {
+            /* if (length > 1) {
                 length = length - 1;
                 sprite_renderer.size = new Vector2(length * width, height);
                 box_collider.size = new Vector2(length * width, height);
-            }
+            } */
+            Destroy(gameObject);
+        }
+
+        if (other.name == "LeftCollider")
+        {
+            leftAble = false;
+        }
+
+        if (other.name == "RightCollider")
+        {
+            rightAble = false;
+        }
+
+    }
+
+    void OnTriggerExit2D(Collider2D other) {
+        if (other.name == "LeftCollider")
+        {
+            leftAble = true;
+        }
+
+        if (other.name == "RightCollider")
+        {
+            rightAble = true;
         }
     }
 

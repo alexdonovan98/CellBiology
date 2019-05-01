@@ -22,9 +22,20 @@ public class Level1Test : MonoBehaviour
 
     enum Pathogen {bouncing, linear};
     private int _next_spawn = 0;
-    private GameObject player_inst;
+    //private GameObject player_inst;
     private float last_spawned = 0.0f;
     private float breakBetweenWaves = 10.0f;
+
+    private int _columns;
+    private int _rows;
+    public int numCells;
+    private int _num_left_to_spawn;
+    //public GameObject player;
+    public GameObject gridParent;
+
+    private GameObject grid_instance;
+
+    private GameObject[,] cells;
 
 
     private void Start()
@@ -32,19 +43,45 @@ public class Level1Test : MonoBehaviour
         pathogenInstances = new GameObject[30];
         
         directions2 = GameObject.Find("Directions2");
-        player_inst = Instantiate(player, new Vector3(0, -8, 0), Quaternion.identity);
-        if (GlobalControl.Instance.Q1Score < 3)
+        //player_inst = Instantiate(player, new Vector3(0, -8, 0), Quaternion.identity);
+
+        if (GlobalControl.Instance.Q1Score < 11)
         {
-            player_inst.GetComponent<PlayerController>().SetLength(5);
+            numCells = 11;
         }
-        else if(GlobalControl.Instance.Q1Score > 15)
+        else if(GlobalControl.Instance.Q1Score > 24)
         {
-            player_inst.GetComponent<PlayerController>().SetLength(10);
+            numCells = 24;
 
         }
         else
         {
-            player_inst.GetComponent<PlayerController>().SetLength((int)GlobalControl.Instance.Q1Score);
+            numCells = (int) GlobalControl.Instance.Q1Score;
+        }
+        _num_left_to_spawn = numCells;
+        if (numCells >= 8) {
+            _columns = 8;
+        } else {
+            _columns = numCells;
+        }
+        _rows = (int) Math.Ceiling(numCells / 8.0);
+        cells = new GameObject[_rows, _columns];
+
+        float spawn_x = -5.0f;
+        float spawn_y = -8.0f;
+        grid_instance = Instantiate(gridParent, new Vector3(0, -8, 0), Quaternion.identity);
+        for(int i = 0; i < _rows; i++) {
+            for(int j = 0; j < _columns; j++) {
+                //Debug.Log(i + ", " + j);
+                if (_num_left_to_spawn > 0) {
+                    cells[i,j] = Instantiate(player, new Vector3(spawn_x, spawn_y, 0), Quaternion.identity);
+                    cells[i,j].transform.parent = grid_instance.transform;
+                    spawn_x += 2.75f;
+                    _num_left_to_spawn--;
+                }
+            }
+            spawn_y += 2.55f;
+            spawn_x = -5.0f;
         }
     }
 

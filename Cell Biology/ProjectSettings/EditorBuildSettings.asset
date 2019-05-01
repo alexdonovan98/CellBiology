@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Question2a.unity
     guid: 9b197d333fe5f44e5a60ba1881d08b82
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 99eb8604873f1cd46bfa0a8a884129ac
+  - enabled: 1
+    path: Assets/Scenes/Video.unity
+    guid: 77aceb8854d88df42b946b728568d462
   m_configObjects: {}

@@ -200,6 +200,9 @@ MonoBehaviour:
     type: 3}
   state: 0
   directions2: {fileID: 837919040}
+  numCells: 1
+  gridParent: {fileID: 517816662868340659, guid: 65136a387f385ae4cbe23d1638790f15,
+    type: 3}
 --- !u!1 &354715980
 GameObject:
   m_ObjectHideFlags: 0
