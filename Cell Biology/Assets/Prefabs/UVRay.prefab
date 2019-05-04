@@ -96,6 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 40
   src: {fileID: 0}
+  destroyAnim: {fileID: 1388680719, guid: 44491bb47db4344eb999b158138d5947, type: 3}
 --- !u!70 &7511656083827735197
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

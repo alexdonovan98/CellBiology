@@ -398,7 +398,11 @@ MonoBehaviour:
   totalDamage: 0
   cellGroupSize: 0
   Q1Score: 0
-  Q2aScore: 0
+  Q2Score: 0
+  Q3Score: 0
+  Q4Score: 0
+  Q5Score: 0
+  max: 30
 --- !u!4 &496037496
 Transform:
   m_ObjectHideFlags: 0
