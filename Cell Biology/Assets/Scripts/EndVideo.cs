@@ -15,6 +15,16 @@ public class EndVideo : MonoBehaviour
     {
         timer -= Time.deltaTime;
 
+        if (timer <= 32) // pick up here
+        {
+            GetComponent<VideoPlayer>().Pause();
+        }
+        if (timer <= 37)
+        {
+            GetComponent<VideoPlayer>().Play();
+        }
+        
+
         if(timer <= 0)
         {
             SceneManager.LoadScene("TutorialLevel");
