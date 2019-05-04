@@ -39,15 +39,7 @@ public class QuestionController5 : MonoBehaviour
         score = Mathf.Max(0, score);
         GlobalControl.Instance.Q5Score = score;
         int addedCells = GlobalControl.Instance.ComputeNumCells(score);
-        if (GlobalControl.Instance.cellGroupSize == GlobalControl.Instance.max)
-        {
-            finalScore.text = score.ToString() + " (+0 cells [maximum reached!])";
-
-        }
-        else
-        {
-            finalScore.text = score.ToString() + " (+ " + addedCells.ToString() + " cells)";
-        }
+        finalScore.text = score.ToString() + " (+ " + addedCells.ToString() + " cells)";
         finalTime.text = Math.Round(currentTime, 4).ToString();
         questionDisplay.SetActive(false);
         roundEndDisplay.SetActive(true);

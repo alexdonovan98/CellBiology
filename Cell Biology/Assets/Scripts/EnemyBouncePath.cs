@@ -10,6 +10,7 @@ public class EnemyBouncePath : MonoBehaviour
     private Transform target;
     private System.Random random = new System.Random();
     private AudioSource src;
+    public GameObject destroyAnim;
 
 
 
@@ -45,6 +46,7 @@ public class EnemyBouncePath : MonoBehaviour
 
         else if (other.gameObject.name == "BottomCollider")
         {
+            Instantiate(destroyAnim, other.gameObject.GetComponent<Collider2D>().bounds.ClosestPoint(transform.position), Quaternion.identity);
             int damageCount = int.Parse(GameObject.Find("DamageCounter").GetComponent<Text>().text);
             DestroySelf();
             damageCount++;
@@ -52,6 +54,7 @@ public class EnemyBouncePath : MonoBehaviour
         }
         else if (other.gameObject.tag == "Player")
         {
+            Instantiate(destroyAnim, other.gameObject.GetComponent<Collider2D>().bounds.ClosestPoint(transform.position), Quaternion.identity);
             AudioSource.PlayClipAtPoint(src.clip, Camera.main.transform.position, 1f);
             DestroySelf();
         }

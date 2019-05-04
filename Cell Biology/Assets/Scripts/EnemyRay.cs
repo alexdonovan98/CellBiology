@@ -7,6 +7,7 @@ public class EnemyRay : MonoBehaviour
 {
     public float speed;
     public AudioSource src;
+    public GameObject destroyAnim;
 
     void Start()
     {
@@ -22,12 +23,14 @@ public class EnemyRay : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Player")){
+            Instantiate(destroyAnim, other.gameObject.GetComponent<Collider2D>().bounds.ClosestPoint(transform.position), Quaternion.identity);
             //AudioSource.PlayClipAtPoint(src.clip, Camera.main.transform.position, 1f);
             //Debug.Log("Played");
             DestroySelf();
         }
         else if (other.gameObject.name == "BottomCollider")
         {
+            Instantiate(destroyAnim, other.gameObject.GetComponent<Collider2D>().bounds.ClosestPoint(transform.position), Quaternion.identity);
             int damageCount = int.Parse(GameObject.Find("DamageCounter").GetComponent<Text>().text);
             DestroySelf();
             damageCount++;
