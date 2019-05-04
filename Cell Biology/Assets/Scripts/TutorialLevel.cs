@@ -81,51 +81,32 @@ public class TutorialLevel : MonoBehaviour
                 //player_inst = Instantiate(player, new Vector3(0, -8, 0), Quaternion.identity);
                 timeLeft += 4;
             }
-            else if (state > 0 && state < 7)
+            else if (state > 0 && state < 3)
             {
                 directions2.GetComponent<Canvas>().sortingLayerName = "Text";
 
                 if (state == 1) {
                     //player_inst.GetComponent<PlayerController>().SetLength(10);
                     //player_inst.transform.position = new Vector3(0, -8, 0);
-                    timeLeft += 7.5f;
+                    timeLeft += 17.0f;
                 } else if (state == 2) {
                     timeLeft += breakBetweenWaves;
-                } else if (state == 3) {
-                    //player_inst.GetComponent<PlayerController>().SetLength(10);
-                    //player_inst.transform.position = new Vector3(0, -8, 0);
-                    timeLeft += 10.0f;
-                } else if (state == 4) {
-                    timeLeft += breakBetweenWaves;
-                } else if (state == 5) {
-                    //player_inst.GetComponent<PlayerController>().SetLength(5);
-                    //player_inst.transform.position = new Vector3(0, -8, 0);
-                    timeLeft += 2.5f;
-                } else if (state == 6) {
-                    timeLeft += breakBetweenWaves;
-                }
+                } 
 
                 arrow_keys.GetComponent<SpriteRenderer>().sortingLayerName = "Hidden";
                 directions1.GetComponent<Canvas>().sortingLayerName = "Hidden";
                 
             } 
-            else if(state == 7)
+            else if(state == 3)
             {
                 SceneManager.LoadScene("WinScreen");
             }
             state++;
             //Debug.Log("State change: " + state);
         }
-        else if (state == 2 || state == 4 || state == 6) {
-            float frequency = 0.0f;
+        else if (state == 2) {
+            float frequency = 2.1f;
             last_spawned += Time.deltaTime;
-            if (state == 2) {
-                frequency = 1.5f;
-            } else if (state == 4) {
-                frequency = 1.0f;
-            } else if (state == 6) {
-                frequency = 0.5f;
-            }
 
             if (last_spawned >= frequency) {
                 SpawnPathogen();
