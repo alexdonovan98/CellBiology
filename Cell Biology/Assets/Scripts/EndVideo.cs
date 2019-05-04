@@ -13,17 +13,7 @@ public class EndVideo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer -= Time.deltaTime;
-
-        if (timer <= 32) // pick up here
-        {
-            GetComponent<VideoPlayer>().Pause();
-        }
-        if (timer <= 37)
-        {
-            GetComponent<VideoPlayer>().Play();
-        }
-        
+        timer -= Time.deltaTime;    
 
         if(timer <= 0)
         {

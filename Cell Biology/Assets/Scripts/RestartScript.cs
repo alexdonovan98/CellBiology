@@ -12,7 +12,7 @@ public class RestartScript : MonoBehaviour
 
     public void ToTutorial()
     {
-        SceneManager.LoadScene("TutorialLevel");
+        SceneManager.LoadScene("Pre-Tutorial");
     }
 
     public void ToLevel1()
