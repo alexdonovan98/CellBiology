@@ -6,7 +6,7 @@ using System.Threading;
 using UnityEngine.SceneManagement;
 using System;
 
-public class Level3 : MonoBehaviour
+public class Level5 : MonoBehaviour
 {
     public float timeLeft = 2.0f;
     public Text countdown;
@@ -23,7 +23,7 @@ public class Level3 : MonoBehaviour
     private System.Random random = new System.Random();
 
     enum Pathogen {bouncing, linear, ray};
-    private int _next_spawn = 0;
+    //private int _next_spawn = 0;
     //private GameObject player_inst;
     private float last_spawned = 0.0f;
     private float breakBetweenWaves = 10.0f;
@@ -111,26 +111,17 @@ public class Level3 : MonoBehaviour
             else if(state == 3)
             {
                 GlobalControl.Instance.totalDamage = int.Parse(GameObject.Find("DamageCounter").GetComponent<Text>().text);
-                SceneManager.LoadScene("Question3");
+                SceneManager.LoadScene("Question5");
             }
             state++;
             //Debug.Log("State change: " + state);
         }
         else if (state == 2) {
-            float frequency = 1.7f;
+            float frequency = 1.5f;
             last_spawned += Time.deltaTime;
 
             if (last_spawned >= frequency) {
-                _next_spawn = random.Next(100);
-                if (_next_spawn > 65) {
-                    SpawnPathogen(Pathogen.ray);
-                } else if (_next_spawn <= 65 && _next_spawn > 25) {
-                    SpawnPathogen(Pathogen.bouncing);
-                    //_next_spawn = 1;
-                } else {
-                    SpawnPathogen(Pathogen.linear);
-                    //_next_spawn = 0;
-                }
+                SpawnPathogen(Pathogen.ray);
                 last_spawned = 0.0f;
             }
         } else {

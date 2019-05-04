@@ -6,7 +6,7 @@ using System.Threading;
 using UnityEngine.SceneManagement;
 using System;
 
-public class Level3 : MonoBehaviour
+public class Level4 : MonoBehaviour
 {
     public float timeLeft = 2.0f;
     public Text countdown;
@@ -101,7 +101,7 @@ public class Level3 : MonoBehaviour
 
                 if (state == 1) {
 
-                    timeLeft += 25.0f;
+                    timeLeft += 30.0f;
                 } else if (state == 2) {
                     timeLeft += breakBetweenWaves;
                 }
@@ -111,20 +111,20 @@ public class Level3 : MonoBehaviour
             else if(state == 3)
             {
                 GlobalControl.Instance.totalDamage = int.Parse(GameObject.Find("DamageCounter").GetComponent<Text>().text);
-                SceneManager.LoadScene("Question3");
+                SceneManager.LoadScene("Question4");
             }
             state++;
             //Debug.Log("State change: " + state);
         }
         else if (state == 2) {
-            float frequency = 1.7f;
+            float frequency = 1.5f;
             last_spawned += Time.deltaTime;
 
             if (last_spawned >= frequency) {
                 _next_spawn = random.Next(100);
-                if (_next_spawn > 65) {
+                if (_next_spawn > 55) {
                     SpawnPathogen(Pathogen.ray);
-                } else if (_next_spawn <= 65 && _next_spawn > 25) {
+                } else if (_next_spawn <= 55 && _next_spawn > 10) {
                     SpawnPathogen(Pathogen.bouncing);
                     //_next_spawn = 1;
                 } else {
