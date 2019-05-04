@@ -20,52 +20,30 @@ public class PlayerController : MonoBehaviour
     public bool rightAble = true;
 
     void Awake() {
-
         sprite_renderer = GetComponent<SpriteRenderer>();
         box_collider = GetComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
         height = 6.911709f;
         width = 7.51125f;
-}
+    }
 
     // Start is called before the first frame update
-    void Start()
-    {
-        //sprite_renderer = GetComponent<SpriteRenderer>();
-        //box_collider = GetComponent<BoxCollider2D>();
-        //rb = GetComponent<Rigidbody2D>();
-        //sprite_renderer.size = new Vector2(length * width, height);
-        //box_collider.size = new Vector2(length * width, height);
-
+    void Start() {
         sprite_renderer.size = new Vector2(width, height);
         box_collider.size = new Vector2(width, height);
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        //Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), 0); // move left/right by one
-        //moveVelocity = moveInput.normalized * speed;
+    void Update() {
+        
     }
 
-    void FixedUpdate()
-    {
-        //rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
+    void FixedUpdate() {
+        
     }
-
-    /* public void SetLength(int l) {
-        length = l;
-        sprite_renderer.size = new Vector2(length * width, height);
-        box_collider.size = new Vector2(length * width, height);
-    } */
 
     void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Enemy")){
-            /* if (length > 1) {
-                length = length - 1;
-                sprite_renderer.size = new Vector2(length * width, height);
-                box_collider.size = new Vector2(length * width, height);
-            } */
             Destroy(gameObject);
         }
 
