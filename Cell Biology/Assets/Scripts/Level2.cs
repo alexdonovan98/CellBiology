@@ -112,7 +112,7 @@ public class Level2 : MonoBehaviour
             else if(state == 3)
             {
                 GlobalControl.Instance.totalDamage = int.Parse(GameObject.Find("DamageCounter").GetComponent<Text>().text);
-                SceneManager.LoadScene("Question2a");
+                SceneManager.LoadScene("Question2");
             }
             state++;
             //Debug.Log("State change: " + state);
