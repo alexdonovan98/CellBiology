@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using System;
 
-public class MultChoiceAnswers : MonoBehaviour
+public class MultChoiceAnswers2a : MonoBehaviour
 {
     public bool isCorrect;
     public GameObject questionController;
@@ -14,12 +14,12 @@ public class MultChoiceAnswers : MonoBehaviour
         if (!isCorrect)
         {
             StartCoroutine(FlashColor());
-            QuestionController2a.score1 -= 2;
+            QuestionController2.score -= 2;
         }
         else
         {
-            QuestionController2a.score1 += 10;
-            questionController.GetComponent<QuestionController2a>().EndRound();
+            QuestionController2.score += 10;
+            questionController.GetComponent<QuestionController2>().To2B();
         }
     }
 

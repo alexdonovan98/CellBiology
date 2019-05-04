@@ -7,6 +7,7 @@ public class EnemyLinearPath : MonoBehaviour
 {
     public float speed;
     public AudioSource src;
+    public GameObject damage;
 
     void Start()
     {
@@ -23,8 +24,10 @@ public class EnemyLinearPath : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Player")){
             AudioSource.PlayClipAtPoint(src.clip, Camera.main.transform.position, 1f);
-            //Debug.Log("Played");
             DestroySelf();
+            Vector3 pt = other.gameObject.GetComponent<Collider>().ClosestPointOnBounds(transform.position);
+            Instantiate(damage, pt, Quaternion.identity);
+
         }
         else if (other.gameObject.name == "BottomCollider")
         {
@@ -32,6 +35,8 @@ public class EnemyLinearPath : MonoBehaviour
             DestroySelf();
             damageCount++;
             GameObject.Find("DamageCounter").GetComponent<Text>().text = damageCount.ToString();
+            Vector3 pt = other.gameObject.GetComponent<Collider>().ClosestPointOnBounds(transform.position);
+            Instantiate(damage, pt, Quaternion.identity);
 
         }
     }

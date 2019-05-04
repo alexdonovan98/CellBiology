@@ -3,23 +3,25 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using System;
+using System.Collections;
 
-public class QuestionController2a : MonoBehaviour
+public class QuestionController4 : MonoBehaviour
 {
     public Text timeDisplay;
     private float currentTime;
-    public static int score1;
+    public static int score;
     public GameObject questionDisplay;
     public GameObject roundEndDisplay;
-    public Text finalTime;
+    public Text finalTime; 
     public Text finalScore;
+
 
     void Start()
     {
-        score1 = 0;
+        score = 0;
         currentTime = 0;
         UpdateTimeDisplay();
-    }
+}
 
     void Update()
     {
@@ -33,7 +35,10 @@ public class QuestionController2a : MonoBehaviour
     }
     public void EndRound()
     {
-        finalScore.text = score1.ToString();
+        score = Mathf.Max(0, score);
+        GlobalControl.Instance.Q4Score = score;
+        int addedCells = GlobalControl.Instance.ComputeNumCells(score);
+        finalScore.text = score.ToString() + " (+ " + addedCells.ToString() + " cells)";
         finalTime.text = Math.Round(currentTime, 4).ToString();
         questionDisplay.SetActive(false);
         roundEndDisplay.SetActive(true);
@@ -41,12 +46,7 @@ public class QuestionController2a : MonoBehaviour
 
     public void NextLevel()
     {
-        //SceneManager.LoadScene("Level2");
+        GlobalControl.Instance.Q2Score += score;
+        SceneManager.LoadScene("Level5");
     }
-
-    private void CorrectPress()
-    {
-
-    }
-
 }

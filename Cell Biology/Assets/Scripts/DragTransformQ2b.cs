@@ -3,17 +3,17 @@ using System.Collections;
 using UnityEngine.UI;
 using System;
 
-public class DragTransform : MonoBehaviour
+public class DragTransformQ2b : MonoBehaviour
 {
     private Vector3 screenpoint;
-    public GameObject correctAns;
+    public GameObject correctPosition1;
+    public GameObject correctPosition2;
     private Vector3 initPos;
 
     void OnMouseDown()
     {
         screenpoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
         initPos = gameObject.transform.position;
-
     }
 
     private void OnMouseDrag()
@@ -26,21 +26,29 @@ public class DragTransform : MonoBehaviour
     private void OnMouseUp()
     {
         //Debug.Log("Rect: " + correctAns.GetComponent<RectTransform>().rect);
-        Debug.Log("Box2d: " + correctAns.GetComponent<BoxCollider2D>().bounds.ToString());
-        Debug.Log("Curr Mouse: " + Camera.main.ScreenToWorldPoint(Input.mousePosition));
+        //Debug.Log("Box2d: " + correctAns.GetComponent<BoxCollider2D>().bounds.ToString());
+        //Debug.Log("Curr Mouse: " + Camera.main.ScreenToWorldPoint(Input.mousePosition));
 
-       if (correctAns.GetComponent<BoxCollider2D>().bounds.Contains(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenpoint.z))))
+        if (correctPosition1.GetComponent<BoxCollider2D>().bounds.Contains(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenpoint.z)))
+        && correctPosition1.transform.childCount == 0)
         //if (correctAns.GetComponent<RectTransform>().rect.Contains(Camera.main.ScreenToWorldPoint(Input.mousePosition)))
         {
-            transform.SetParent(correctAns.transform);
-            QuestionController1.score1 += 5;
+            transform.SetParent(correctPosition1.transform);
+            QuestionController2.score += 5;
+        }
+        else if (correctPosition2.GetComponent<BoxCollider2D>().bounds.Contains(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenpoint.z)))
+&& correctPosition2.transform.childCount == 0)
+        {
+            transform.SetParent(correctPosition2.transform);
+            QuestionController2.score += 5;
         }
         else
         {
             StartCoroutine(FlashColor());
-            QuestionController1.score1 -= 2;
+            QuestionController2.score -= 2;
 
         }
+
     }
 
     IEnumerator FlashColor()
