@@ -48,7 +48,7 @@ public class QuestionController5 : MonoBehaviour
     public void NextLevel()
     {
         GlobalControl.Instance.Q2Score += score;
-        //SceneManager.LoadScene("");
+        SceneManager.LoadScene("End");
     }
 
     public void OnSubmit()

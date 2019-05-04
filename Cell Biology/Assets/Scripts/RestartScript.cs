@@ -19,4 +19,8 @@ public class RestartScript : MonoBehaviour
     {
         SceneManager.LoadScene("Level1");
     }
+    public void restartGame()
+    {
+        SceneManager.LoadScene("StartMenu");
+    }
 }

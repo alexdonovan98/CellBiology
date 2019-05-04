@@ -110,7 +110,7 @@ public class Level5 : MonoBehaviour
             } 
             else if(state == 3)
             {
-                GlobalControl.Instance.totalDamage = int.Parse(GameObject.Find("DamageCounter").GetComponent<Text>().text);
+                GlobalControl.Instance.totalDamage += int.Parse(GameObject.Find("DamageCounter").GetComponent<Text>().text);
                 SceneManager.LoadScene("Question5");
             }
             state++;
