@@ -133,6 +133,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   src: {fileID: 0}
+  damage: {fileID: 0}
+  destroyAnim: {fileID: 1388680719, guid: 44491bb47db4344eb999b158138d5947, type: 3}
 --- !u!50 &9014130133534941003
 Rigidbody2D:
   serializedVersion: 4

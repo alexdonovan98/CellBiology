@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class GlobalControl : MonoBehaviour
 {
-    public float totalDamage;
-    public float cellGroupSize;
-    public float Q1Score;
-    public float Q2aScore;
+    public int totalDamage;
+    public int cellGroupSize;
+    public int Q1Score;
+    public int Q2Score;
+    public int Q3Score;
+    public int Q4Score;
+    public int Q5Score;
+    public int max = 30;
 
     public static GlobalControl Instance;
 
@@ -22,5 +26,16 @@ public class GlobalControl : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+    public int ComputeNumCells(int score)
+    {
+        if (cellGroupSize == max)
+        {
+            return 0;
+        }
+        int dif = max - cellGroupSize;
+        int addedCells = (int)(dif * score) / 50;
+        cellGroupSize += addedCells;
+        return addedCells;
     }
 }
