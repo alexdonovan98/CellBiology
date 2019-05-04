@@ -17,7 +17,7 @@ public class EndVideo : MonoBehaviour
 
         if(timer <= 0)
         {
-            SceneManager.LoadScene("TutorialLevel");
+            SceneManager.LoadScene("Pre-Tutorial");
         }
     }
 }
