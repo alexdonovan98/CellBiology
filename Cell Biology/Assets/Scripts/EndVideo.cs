@@ -16,7 +16,7 @@ public class EndVideo : MonoBehaviour
 
         if(timer <= 0)
         {
-            SceneManager.LoadScene("Video");
+            //SceneManager.LoadScene("Video");
         }
     }
 }

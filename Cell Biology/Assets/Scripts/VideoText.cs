@@ -93,14 +93,14 @@ public class VideoText : MonoBehaviour
             spindleBipolarityText1.SetActive(false);
             spindleBipolarityText2.SetActive(true);
         }
-        if (timer >= 39f)
+        if (timer >= 38f)
         {
             spindleBipolarityTitle.SetActive(false);
             spindleBipolarityText2.SetActive(false);
             anaphaseTitle.SetActive(true);
             anaphaseText1.SetActive(true);
         }
-        if (timer >= 42f)
+        if (timer >= 41f)
         {
             anaphaseTitle.SetActive(false);
             anaphaseText1.SetActive(false);
