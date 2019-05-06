@@ -45,7 +45,6 @@ public class DragTransformQ2b : MonoBehaviour
         else
         {
             StartCoroutine(FlashColor());
-            QuestionController2.score -= 2;
 
         }
 
@@ -59,9 +58,6 @@ public class DragTransformQ2b : MonoBehaviour
         gameObject.GetComponent<Image>().color = Color.white;
     }
 }
-
-
-
 
 
 
