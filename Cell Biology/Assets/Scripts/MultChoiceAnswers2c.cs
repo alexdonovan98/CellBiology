@@ -56,7 +56,6 @@ public class MultChoiceAnswers2c : MonoBehaviour
             {
                 transform.GetComponent<Image>().color = Color.red;
             }
-            QuestionController2.score -= 2;
             hint = true;
 
         }

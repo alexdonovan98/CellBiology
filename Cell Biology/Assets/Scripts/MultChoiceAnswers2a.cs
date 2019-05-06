@@ -10,6 +10,7 @@ public class MultChoiceAnswers2a : MonoBehaviour
     public GameObject hover;
     public bool hint = false;
 
+
     public void OnClick()
     {
         if (!isCorrect & !hint)

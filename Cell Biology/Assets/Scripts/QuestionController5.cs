@@ -7,47 +7,43 @@ using System.Collections;
 
 public class QuestionController5 : MonoBehaviour
 {
-    public Text timeDisplay;
-    private float currentTime;
     public static int score;
     public GameObject questionDisplay;
     public GameObject roundEndDisplay;
-    public Text finalTime;
     public Text finalScore;
+    public Text cellNum;
+    public GameObject answers;
+    public Text hintText;
+    public int hint = 1;
 
 
     void Start()
     {
         score = 0;
-        currentTime = 0;
-        UpdateTimeDisplay();
+        Transform[] obj = (Transform[])answers.GetComponentsInChildren<Transform>();
+        for (int i = 0; i < 20; i++)
+        {
+            if (obj[i].parent == answers.transform)
+            {
+                obj[i].SetSiblingIndex(UnityEngine.Random.Range(0, 10));
+            }
+        }
     }
 
-    void Update()
-    {
-        currentTime += Time.deltaTime;
-        UpdateTimeDisplay();
-
-    }
-
-    private void UpdateTimeDisplay()
-    {
-        timeDisplay.text = Mathf.Round(currentTime).ToString();
-    }
     public void EndRound()
     {
         score = Mathf.Max(0, score);
         GlobalControl.Instance.Q5Score = score;
         int addedCells = GlobalControl.Instance.ComputeNumCells(score);
-        finalScore.text = score.ToString() + " (+ " + addedCells.ToString() + " cells)";
-        finalTime.text = Math.Round(currentTime, 4).ToString();
+        finalScore.text = "Score: " + score.ToString() + "/30";
+        cellNum.text = "Cells: " + GlobalControl.Instance.cellGroupSize.ToString() + " (+ " + addedCells.ToString() + " cells!)";
         questionDisplay.SetActive(false);
         roundEndDisplay.SetActive(true);
     }
 
     public void NextLevel()
     {
-        GlobalControl.Instance.Q2Score += score;
+        GlobalControl.Instance.Q5Score = score;
         SceneManager.LoadScene("End");
     }
 
@@ -64,7 +60,7 @@ public class QuestionController5 : MonoBehaviour
             GameObject.Find("AnswerF4").GetComponent<MultChoiceAnswers2c>().pressed == false &&
             GameObject.Find("AnswerF5").GetComponent<MultChoiceAnswers2c>().pressed == false)
         {
-            score += 40;
+            score += 30;
             EndRound();
         }
         else
@@ -81,5 +77,36 @@ public class QuestionController5 : MonoBehaviour
             GameObject.Find("AnswerF5").GetComponent<MultChoiceAnswers2c>().UnPress();
             score -= 2;
         }
+    }
+    public void OnHint()
+    {
+        if (hint > 0)
+        {
+            hint--;
+            score -= 2;
+            Transform[] childs = (Transform[])answers.GetComponentsInChildren<Transform>();
+            Transform randomObject = ((Transform)childs[UnityEngine.Random.Range(0, childs.Length)]);
+
+            while (true)
+            {
+                while (randomObject.parent != answers.transform)
+                {
+                    randomObject = ((Transform)childs[UnityEngine.Random.Range(0, childs.Length)]);
+                }
+                if (!randomObject.gameObject.GetComponent<MultChoiceAnswers2c>().hint)
+                {
+                    break;
+                }
+                else
+                {
+                    randomObject = ((Transform)childs[UnityEngine.Random.Range(0, childs.Length)]);
+
+                }
+            }
+            randomObject.gameObject.GetComponent<MultChoiceAnswers2c>().Hint();
+
+            hintText.text = "Hint " + "(" + hint.ToString() + ")";
+        }
+
     }
 }

@@ -77,7 +77,7 @@ public class QuestionController2 : MonoBehaviour
 
     public void NextLevel()
     {
-        GlobalControl.Instance.Q2Score += score;
+        GlobalControl.Instance.Q2Score = score;
         SceneManager.LoadScene("Level3");
     }
 
@@ -157,6 +157,7 @@ public class QuestionController2 : MonoBehaviour
         if (hintC > 0)
         {
             hintC--;
+            score -= 2;
             Transform[] childs = (Transform[])answersC.GetComponentsInChildren<Transform>();
             Transform randomObject = ((Transform)childs[UnityEngine.Random.Range(0, childs.Length)]);
 

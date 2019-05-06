@@ -11,10 +11,19 @@ public class QuestionController3 : MonoBehaviour
     public GameObject roundEndDisplay;
     public Text finalScore;
     public Text cellNum;
+    public GameObject answers;
 
     void Start()
     {
         score = 0;
+        Transform[] obj = (Transform[])answers.GetComponentsInChildren<Transform>();
+        for (int i = 0; i < 8; i++)
+        {
+            if (obj[i].parent == answers.transform)
+            {
+                obj[i].SetSiblingIndex(UnityEngine.Random.Range(0, 4));
+            }
+        }
     }
 
     public void EndRound()
@@ -30,7 +39,7 @@ public class QuestionController3 : MonoBehaviour
 
     public void NextLevel()
     {
-        GlobalControl.Instance.Q1Score = score;
+        GlobalControl.Instance.Q3Score = score;
         SceneManager.LoadScene("Level4");
     }
 
