@@ -6,38 +6,24 @@ using System;
 
 public class QuestionController3 : MonoBehaviour
 {
-    public Text timeDisplay;
-    private float currentTime;
     public static int score;
     public GameObject questionDisplay;
     public GameObject roundEndDisplay;
-    public Text finalTime;
     public Text finalScore;
+    public Text cellNum;
 
     void Start()
     {
         score = 0;
-        currentTime = 0;
-        UpdateTimeDisplay();
     }
 
-    void Update()
-    {
-        currentTime += Time.deltaTime;
-        UpdateTimeDisplay();
-
-    }
-    private void UpdateTimeDisplay()
-    {
-        timeDisplay.text = Mathf.Round(currentTime).ToString();
-    }
     public void EndRound()
     {
         score = Mathf.Max(0, score);
         GlobalControl.Instance.Q3Score = score;
         int addedCells = GlobalControl.Instance.ComputeNumCells(score);
-        finalScore.text = score.ToString() + " (+ " + addedCells.ToString() + " cells)";
-        finalTime.text = Math.Round(currentTime, 4).ToString();
+        finalScore.text = "Score: " + score.ToString() + "/30";
+        cellNum.text = "Cells: " + GlobalControl.Instance.cellGroupSize.ToString() + " (+ " + addedCells.ToString() + " cells!)";
         questionDisplay.SetActive(false);
         roundEndDisplay.SetActive(true);
     }
@@ -67,4 +53,5 @@ public class QuestionController3 : MonoBehaviour
             score -= 2;
         }
     }
+
 }
