@@ -22,9 +22,12 @@ public class EnemyLinearPath : MonoBehaviour
 
 
     void OnTriggerEnter2D(Collider2D other) {
-        if(other.CompareTag("Player")){
+        if(other.CompareTag("Player")){ 
+            if (GlobalControl.Instance.cellGroupSize > 0)
+            {
+                GlobalControl.Instance.cellGroupSize--;
+            }
             Instantiate(destroyAnim, other.gameObject.GetComponent<Collider2D>().bounds.ClosestPoint(transform.position), Quaternion.identity);
-            GlobalControl.Instance.cellGroupSize--;
             AudioSource.PlayClipAtPoint(src.clip, Camera.main.transform.position, 1f);
             DestroySelf();
 

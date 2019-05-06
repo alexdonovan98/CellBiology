@@ -44,7 +44,10 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Enemy")){
-            Destroy(gameObject);
+            if(GlobalControl.Instance.cellGroupSize > 0)
+            {
+                Destroy(gameObject);
+            }
         }
 
         if (other.name == "LeftCollider")

@@ -34,7 +34,7 @@ public class GlobalControl : MonoBehaviour
             return 0;
         }
         int dif = max - cellGroupSize;
-        int addedCells = (int)(dif * score) / 50;
+        int addedCells = (int)(dif * score) / 30;
         cellGroupSize += addedCells;
         return addedCells;
     }
