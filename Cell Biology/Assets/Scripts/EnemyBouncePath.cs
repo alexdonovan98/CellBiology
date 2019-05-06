@@ -55,6 +55,7 @@ public class EnemyBouncePath : MonoBehaviour
         else if (other.gameObject.tag == "Player")
         {
             Instantiate(destroyAnim, other.gameObject.GetComponent<Collider2D>().bounds.ClosestPoint(transform.position), Quaternion.identity);
+            GlobalControl.Instance.cellGroupSize--;
             AudioSource.PlayClipAtPoint(src.clip, Camera.main.transform.position, 1f);
             DestroySelf();
         }

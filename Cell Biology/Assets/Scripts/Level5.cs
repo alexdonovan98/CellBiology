@@ -46,19 +46,8 @@ public class Level5 : MonoBehaviour
         
         directions2 = GameObject.Find("Directions2");
         //player_inst = Instantiate(player, new Vector3(0, -8, 0), Quaternion.identity);
-        if (GlobalControl.Instance.Q1Score < 8)
-        {
-            numCells = 8;
-        }
-        else if(GlobalControl.Instance.Q1Score > 24)
-        {
-            numCells = 24;
+        numCells = GlobalControl.Instance.cellGroupSize;
 
-        }
-        else
-        {
-            numCells = (int) GlobalControl.Instance.Q1Score;
-        }
         _num_left_to_spawn = numCells;
         if (numCells >= 8) {
             _columns = 8;

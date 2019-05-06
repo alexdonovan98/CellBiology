@@ -11,7 +11,7 @@ public class GlobalControl : MonoBehaviour
     public int Q3Score;
     public int Q4Score;
     public int Q5Score;
-    public int max = 30;
+    public int max = 24;
 
     public static GlobalControl Instance;
 

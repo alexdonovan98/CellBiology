@@ -20,6 +20,16 @@ public class QuestionController1 : MonoBehaviour
         score = 0;
         currentTime = 0;                                
         UpdateTimeDisplay();
+        Transform[] obj = answers.GetComponentsInChildren<Transform>();
+        for(int i = 0; i < 12; i++)
+        {
+            if (obj[i].parent == answers)
+            {
+                print(obj[i]);
+                obj[i].SetAsLastSibling();
+            }
+        }
+
     }
 
     void Update()

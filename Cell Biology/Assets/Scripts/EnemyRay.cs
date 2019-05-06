@@ -26,6 +26,7 @@ public class EnemyRay : MonoBehaviour
             Instantiate(destroyAnim, other.gameObject.GetComponent<Collider2D>().bounds.ClosestPoint(transform.position), Quaternion.identity);
             //AudioSource.PlayClipAtPoint(src.clip, Camera.main.transform.position, 1f);
             //Debug.Log("Played");
+            GlobalControl.Instance.cellGroupSize--;
             DestroySelf();
         }
         else if (other.gameObject.name == "BottomCollider")
