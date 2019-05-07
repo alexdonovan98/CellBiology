@@ -36,7 +36,6 @@ public class QuestionController5 : MonoBehaviour
         GlobalControl.Instance.Q5Score = score;
         int addedCells = GlobalControl.Instance.ComputeNumCells(score);
         finalScore.text = "Score: " + score.ToString() + "/30";
-        cellNum.text = "Cells: " + GlobalControl.Instance.cellGroupSize.ToString() + " (+ " + addedCells.ToString() + " cells!)";
         questionDisplay.SetActive(false);
         roundEndDisplay.SetActive(true);
     }

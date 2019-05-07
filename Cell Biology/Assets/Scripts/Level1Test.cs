@@ -45,7 +45,7 @@ public class Level1Test : MonoBehaviour
         directions2 = GameObject.Find("Directions2");
         //player_inst = Instantiate(player, new Vector3(0, -8, 0), Quaternion.identity);
 
-        numCells = 3;
+        numCells = 11;
         GlobalControl.Instance.cellGroupSize = numCells;
 
         _num_left_to_spawn = numCells;

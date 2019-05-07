@@ -51,6 +51,7 @@ public class TutorialLevel : MonoBehaviour
         arrow_keys = GameObject.Find("Arrow Keys");
         directions1 = GameObject.Find("Directions1");
         directions2 = GameObject.Find("Directions2");
+        GlobalControl.Instance.cellGroupSize = 24;
 
         float spawn_x = -5.0f;
         float spawn_y = -8.0f;
