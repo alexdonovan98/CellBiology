@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 450791047}
   - component: {fileID: 450791046}
   m_Layer: 5
-  m_Name: Text
+  m_Name: T1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 1014083139}
   - component: {fileID: 1014083138}
   m_Layer: 5
-  m_Name: Text (2)
+  m_Name: T3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 1088856059}
   - component: {fileID: 1088856058}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: T2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -486,7 +486,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '...but there are many things that can hurt your skin cells'
+  m_Text: '...but there are many things that can hurt your skin cells, such as sand,
+    pathogens, and UV Rays'
 --- !u!222 &1088856059
 CanvasRenderer:
   m_ObjectHideFlags: 0

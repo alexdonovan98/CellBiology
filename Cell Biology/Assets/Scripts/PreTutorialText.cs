@@ -24,7 +24,7 @@ public class PreTutorialText : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        bg.transform.position += new Vector3(0, 0.009f, 0);
+        bg.transform.position += new Vector3(0, 0.008f, 0);
 
         if(timer >= 17f)
         {
@@ -38,7 +38,7 @@ public class PreTutorialText : MonoBehaviour
             Text3.SetActive(true);
         }
 
-        else if (timer >= 5f)
+        else if (timer >= 3f)
         {
             Text1.SetActive(false);
             Text2.SetActive(true);
