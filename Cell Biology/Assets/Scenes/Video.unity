@@ -183,17 +183,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 9
+    m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 0
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 0.85
+    m_LineSpacing: 0.95
   m_Text: The placement of the cytokinetic furrow (i.e. division plane specification)
     corresponds to the orientation and position of the spindle in anaphase (note that
     between metaphase and anaphase, the spindle rotates from roughly horizontal to
@@ -222,8 +222,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 110.88, y: -55.954987}
-  m_SizeDelta: {x: 209.26, y: 62.81}
+  m_AnchoredPosition: {x: 161.49054, y: -80.4025}
+  m_SizeDelta: {x: 294.99, y: 85.47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &409312975
 GameObject:
@@ -363,8 +363,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 86.55499, y: -16.712}
-  m_SizeDelta: {x: 156.8, y: 21.323}
+  m_AnchoredPosition: {x: 152.12915, y: -42.316956}
+  m_SizeDelta: {x: 276.27, y: 63.200012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &436702277
 MonoBehaviour:
@@ -403,10 +403,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 463bcd5d519295d439a64a2d0a7ef10b, type: 3}
-    m_FontSize: 15
+    m_FontSize: 24
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 1
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -457,8 +457,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -121.8, y: 100.32}
-  m_SizeDelta: {x: 224.5, y: 91.363}
+  m_AnchoredPosition: {x: -241.9, y: 186.8}
+  m_SizeDelta: {x: 330.19, y: 134.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &447776798
 MonoBehaviour:
@@ -530,7 +530,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &499653587
 RectTransform:
   m_ObjectHideFlags: 0
@@ -547,8 +547,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 104.6, y: -27.300003}
-  m_SizeDelta: {x: 192.88, y: 42.5}
+  m_AnchoredPosition: {x: 156.0897, y: -48.187805}
+  m_SizeDelta: {x: 276.27, y: 63.200012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &499653588
 MonoBehaviour:
@@ -587,10 +587,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 463bcd5d519295d439a64a2d0a7ef10b, type: 3}
-    m_FontSize: 15
+    m_FontSize: 24
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 1
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -625,7 +625,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &503592202
 RectTransform:
   m_ObjectHideFlags: 0
@@ -642,8 +642,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 104.6, y: -25.59999}
-  m_SizeDelta: {x: 192.88, y: 39.1}
+  m_AnchoredPosition: {x: 165.63, y: -42.316986}
+  m_SizeDelta: {x: 285.6, y: 63.200012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &503592203
 MonoBehaviour:
@@ -682,10 +682,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 463bcd5d519295d439a64a2d0a7ef10b, type: 3}
-    m_FontSize: 15
+    m_FontSize: 24
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 1
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -773,8 +773,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 33.6, y: -50}
-  m_SizeDelta: {x: 10.15, y: 13.72}
+  m_AnchoredPosition: {x: 20.689999, y: -50}
+  m_SizeDelta: {x: 19.53, y: 23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &524041599
 MonoBehaviour:
@@ -831,7 +831,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &713455255
 RectTransform:
   m_ObjectHideFlags: 0
@@ -848,8 +848,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 104.6, y: -15.299995}
-  m_SizeDelta: {x: 192.88, y: 18.5}
+  m_AnchoredPosition: {x: 167.3325, y: -39}
+  m_SizeDelta: {x: 311.72, y: 63.200012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &713455256
 MonoBehaviour:
@@ -873,7 +873,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 463bcd5d519295d439a64a2d0a7ef10b, type: 3}
-    m_FontSize: 15
+    m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -942,8 +942,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 36, y: -50}
-  m_SizeDelta: {x: 11.84, y: 13.94}
+  m_AnchoredPosition: {x: 24.7, y: -50}
+  m_SizeDelta: {x: 19.53, y: 23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &724474160
 MonoBehaviour:
@@ -1000,7 +1000,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &798238080
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1017,8 +1017,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 110.88, y: -55.880997}
-  m_SizeDelta: {x: 205.45, y: 62.96}
+  m_AnchoredPosition: {x: 165.03621, y: -83.849976}
+  m_SizeDelta: {x: 316.31, y: 93.100006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &798238081
 MonoBehaviour:
@@ -1042,17 +1042,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 9
+    m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 0
+    m_MinSize: 1
     m_MaxSize: 300
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 0.8
+    m_LineSpacing: 0.95
   m_Text: As condensation proceeds, chromosomes become more rod-shaped but do not
     move around except to settle away from each other as the nucleus enlarges before
     breaking down. Before nuclear envelope breakdown, chromosome movement is limited
@@ -1114,8 +1114,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 57.9, y: -50}
-  m_SizeDelta: {x: 32.67, y: 18.8}
+  m_AnchoredPosition: {x: 64.53298, y: -50}
+  m_SizeDelta: {x: 63.555, y: 26.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &837229145
 MonoBehaviour:
@@ -1139,10 +1139,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 10
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 0
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1177,7 +1177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &842014147
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1194,8 +1194,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 104.6, y: -61.469}
-  m_SizeDelta: {x: 192.87, y: 44.84}
+  m_AnchoredPosition: {x: 158.07999, y: -87.633575}
+  m_SizeDelta: {x: 270.5, y: 59.919983}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &842014148
 MonoBehaviour:
@@ -1234,17 +1234,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 9
+    m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 0
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 0.95
   m_Text: Chromosome movement is driven by dynamic instability of the microtubules
     that terminate at, and are mechanically coupled to, the kinetochores.
 --- !u!222 &842014150
@@ -1273,7 +1273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1041062811
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1290,8 +1290,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 110.88, y: -56.042}
-  m_SizeDelta: {x: 205.45, y: 55.68}
+  m_AnchoredPosition: {x: 161.49054, y: -80.4025}
+  m_SizeDelta: {x: 294.99, y: 72.630005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1041062812
 MonoBehaviour:
@@ -1330,17 +1330,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 9
+    m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 0
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 0.95
   m_Text: The cytokinetic furrow, which ingresses powered by a contractile array rich
     in actin filaments and active myosin motor complexes, pinches the cell in two,
     partitioning the two masses of segregated chromatin into two separate cells.
@@ -1386,8 +1386,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 10.2, y: -8.95}
-  m_SizeDelta: {x: 11.81, y: 13.91}
+  m_AnchoredPosition: {x: 14.200001, y: -16.6}
+  m_SizeDelta: {x: 19.53, y: 23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1042641760
 MonoBehaviour:
@@ -1444,7 +1444,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1058445529
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1461,8 +1461,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 103.31999, y: -16.712997}
-  m_SizeDelta: {x: 190.33, y: 21.32}
+  m_AnchoredPosition: {x: 156.08975, y: -48.177795}
+  m_SizeDelta: {x: 276.27, y: 63.200012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1058445530
 MonoBehaviour:
@@ -1501,10 +1501,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 463bcd5d519295d439a64a2d0a7ef10b, type: 3}
-    m_FontSize: 15
+    m_FontSize: 24
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 1
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1539,7 +1539,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1102864122
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1556,8 +1556,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 104.6, y: -57.293}
-  m_SizeDelta: {x: 192.86, y: 53.184}
+  m_AnchoredPosition: {x: 163.20578, y: -83.51996}
+  m_SizeDelta: {x: 290.5, y: 70.04999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1102864123
 MonoBehaviour:
@@ -1596,17 +1596,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 9
+    m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 0
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 0.95
   m_Text: The dense collection of microtubules that make up the bulk of the spindle
     exclude granular cytoplasmic organelles (including the snake-like mitochondria
     that jiggle in the cell periphery)
@@ -1652,8 +1652,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 8.6, y: -8.95}
-  m_SizeDelta: {x: 12.44, y: 14.65}
+  m_AnchoredPosition: {x: 14.1, y: -16.605}
+  m_SizeDelta: {x: 19.53, y: 23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1395090526
 MonoBehaviour:
@@ -1710,7 +1710,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1431660770
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1727,8 +1727,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 106.5, y: -56.193}
-  m_SizeDelta: {x: 196.68, y: 55.38}
+  m_AnchoredPosition: {x: 161.24046, y: -80.83255}
+  m_SizeDelta: {x: 286.57, y: 72.51001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1431660771
 MonoBehaviour:
@@ -1767,17 +1767,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 9
+    m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 0
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 0.95
   m_Text: Upon anaphase onset, chromosomes separate and are pulled to the two spindle
     poles by the concerted action of microtubule-based motors, microtubule depolymerization,
     spindle elongation and chromosome condensation.
@@ -1807,7 +1807,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1469062726
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1824,8 +1824,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 104.6, y: -60.97}
-  m_SizeDelta: {x: 192.89, y: 45.84}
+  m_AnchoredPosition: {x: 165.91, y: -89.94495}
+  m_SizeDelta: {x: 286.16, y: 57.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1469062727
 MonoBehaviour:
@@ -1864,17 +1864,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 9
+    m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 0
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 0.95
   m_Text: The presence of kinetochores on the condensed chromosomes is evidenced by
     the microtubule-directed movements of the chromosomes, which oscillate left-to-right.
 --- !u!222 &1469062729
@@ -2064,7 +2064,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1652759013
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2081,8 +2081,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 103.32, y: -52.899994}
-  m_SizeDelta: {x: 190.33, y: 51.05}
+  m_AnchoredPosition: {x: 164.65001, y: -86.92497}
+  m_SizeDelta: {x: 306.36, y: 86.95001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1652759014
 MonoBehaviour:
@@ -2106,10 +2106,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 9
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 0
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -2161,7 +2161,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1695251401
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2178,8 +2178,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 104.6, y: -16.713}
-  m_SizeDelta: {x: 192.88, y: 21.325}
+  m_AnchoredPosition: {x: 156.08975, y: -48.187805}
+  m_SizeDelta: {x: 276.27, y: 63.200012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1695251402
 MonoBehaviour:
@@ -2218,10 +2218,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 463bcd5d519295d439a64a2d0a7ef10b, type: 3}
-    m_FontSize: 15
+    m_FontSize: 24
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 1
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -2276,8 +2276,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 90.3, y: -124.7}
-  m_SizeDelta: {x: 49.8, y: 17.9}
+  m_AnchoredPosition: {x: 156, y: -225}
+  m_SizeDelta: {x: 92.62, y: 33.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1709905287
 MonoBehaviour:
@@ -2433,11 +2433,11 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 1
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 2
+  m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -2552,7 +2552,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1864571599
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2569,8 +2569,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 89.979996, y: -62.6}
-  m_SizeDelta: {x: 163.64, y: 32.5}
+  m_AnchoredPosition: {x: 153.2043, y: -104.59604}
+  m_SizeDelta: {x: 270.5, y: 57.200012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1864571600
 MonoBehaviour:
@@ -2594,10 +2594,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 9
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 0
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -2663,8 +2663,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 56.9, y: -50}
-  m_SizeDelta: {x: 38.99, y: 16.02}
+  m_AnchoredPosition: {x: 64.53298, y: -50}
+  m_SizeDelta: {x: 63.555, y: 26.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1902399528
 MonoBehaviour:
@@ -2688,7 +2688,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 10
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -2726,7 +2726,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2026964697
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2743,8 +2743,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 104.6, y: -56.32}
-  m_SizeDelta: {x: 192.89, y: 55.14}
+  m_AnchoredPosition: {x: 163.20578, y: -81.792694}
+  m_SizeDelta: {x: 290.5, y: 73.50702}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2026964698
 MonoBehaviour:
@@ -2783,17 +2783,17 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 9
+    m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 0
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 0.95
   m_Text: The most prominent features of the bipolar spindle are the two half-spindles,
     which appear as two rounded triangles horizontally opposed, and the coalescing
     metaphase plate of chromosomes.
@@ -2951,8 +2951,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 197.9, y: -124.7}
-  m_SizeDelta: {x: 39.3, y: 17.9}
+  m_AnchoredPosition: {x: 355.98, y: -225}
+  m_SizeDelta: {x: 73.04, y: 33.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5642641456763203530
 CanvasRenderer:
@@ -2978,8 +2978,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 9.51, y: 0}
-  m_SizeDelta: {x: -19.02, y: 0}
+  m_AnchoredPosition: {x: 12.575008, y: 0}
+  m_SizeDelta: {x: -25.15, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5642641457083218597
 GameObject:
@@ -3029,7 +3029,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 10
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -3063,7 +3063,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 10
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -3117,8 +3117,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 7.41, y: 0}
-  m_SizeDelta: {x: -14.82, y: 0}
+  m_AnchoredPosition: {x: 9.765007, y: 0}
+  m_SizeDelta: {x: -19.53, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &5642641457667209700
 RectTransform:
@@ -3138,8 +3138,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 146.2, y: -124.7}
-  m_SizeDelta: {x: 55.4, y: 17.9}
+  m_AnchoredPosition: {x: 260, y: -225.01}
+  m_SizeDelta: {x: 102.9, y: 33.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5642641457667209701
 GameObject:
