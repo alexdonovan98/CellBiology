@@ -55,10 +55,10 @@ public class QuestionController3 : MonoBehaviour
         }
         else
         {
-            GameObject.Find("Answer1").GetComponent<MultChoiceAnswers2c>().UnPress();
-            GameObject.Find("Answer2").GetComponent<MultChoiceAnswers2c>().UnPress();
-            GameObject.Find("Answer3").GetComponent<MultChoiceAnswers2c>().UnPress();
-            GameObject.Find("Answer4").GetComponent<MultChoiceAnswers2c>().UnPress();
+            GameObject.Find("Answer1").GetComponent<MultChoiceAnswers2c>().UnPress3();
+            GameObject.Find("Answer2").GetComponent<MultChoiceAnswers2c>().UnPress3();
+            GameObject.Find("Answer3").GetComponent<MultChoiceAnswers2c>().UnPress3();
+            GameObject.Find("Answer4").GetComponent<MultChoiceAnswers2c>().UnPress3();
             score -= 5;
         }
     }

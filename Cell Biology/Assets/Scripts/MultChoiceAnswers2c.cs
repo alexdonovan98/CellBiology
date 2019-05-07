@@ -43,6 +43,13 @@ public class MultChoiceAnswers2c : MonoBehaviour
         }
     }
 
+    public void UnPress3()
+    {
+
+        transform.GetComponent<Image>().color = Color.white;
+        pressed = false;
+    }
+
     public void Hint()
     {
         if (!hint)
