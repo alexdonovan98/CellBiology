@@ -59,7 +59,7 @@ public class QuestionController3 : MonoBehaviour
             GameObject.Find("Answer2").GetComponent<MultChoiceAnswers2c>().UnPress();
             GameObject.Find("Answer3").GetComponent<MultChoiceAnswers2c>().UnPress();
             GameObject.Find("Answer4").GetComponent<MultChoiceAnswers2c>().UnPress();
-            score -= 2;
+            score -= 5;
         }
     }
 

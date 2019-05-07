@@ -21,6 +21,13 @@ public class QuestionController2 : MonoBehaviour
     public Text hintTextC;
     private int hintA = 1;
     private int hintC = 3;
+    public GameObject anim1;
+    public GameObject anim2;
+    public GameObject anim3;
+    public GameObject anim4;
+    public GameObject anim5;
+    float timer = 0f;
+
 
 
     void Start()
@@ -46,11 +53,49 @@ public class QuestionController2 : MonoBehaviour
 
     void Update()
     {
-        if (question2bDisplay.activeInHierarchy && centrosomes.transform.childCount == 0)
+        if(question2bDisplay.activeInHierarchy && centrosomes.transform.childCount == 0)
         {
-            MyDelay(2);
-            To2C();
+            if(timer > 10f)
+            {
+                To2C();
+            }
+            else if (timer > 8f)
+            {
+                StartCoroutine(FadeTo(0f, 1.5f, anim4.transform));
+                StartCoroutine(FadeTo(1f, 1.5f, anim5.transform));
+            }
+            else if (timer > 6f)
+            {
+                StartCoroutine(FadeTo(0f, 1.5f, anim3.transform));
+                StartCoroutine(FadeTo(1f, 1.5f, anim4.transform));
+            }
+            else if(timer > 4f)
+            {
+                StartCoroutine(FadeTo(0f, 1.5f, anim2.transform));
+                StartCoroutine(FadeTo(1f, 1.5f, anim3.transform));
+            }
+            else if(timer > 2f)
+            {
+                StartCoroutine(FadeTo(0f, 1.5f, GameObject.Find("CC1").transform));
+                StartCoroutine(FadeTo(0f, 1.5f, GameObject.Find("CC2").transform));
+                StartCoroutine(FadeTo(0f, 1.5f, anim1.transform));
+                StartCoroutine(FadeTo(1f, 1.5f, anim2.transform));
+
+            }
+            else
+            {
+                StartCoroutine(FadeTo(0f, 1.5f, GameObject.Find("C1").transform));
+                StartCoroutine(FadeTo(0f, 1.5f, GameObject.Find("C2").transform));
+                StartCoroutine(FadeTo(0f, 1.5f, GameObject.Find("CellImage").transform));
+                StartCoroutine(FadeTo(1f, 1.5f, GameObject.Find("CC1").transform));
+                StartCoroutine(FadeTo(1f, 1.5f, GameObject.Find("CC2").transform));
+                StartCoroutine(FadeTo(1f, 1.5f, anim1.transform));
+            }
+            timer += Time.deltaTime;
+            //MyDelay(2);
+            //To2C();
         }
+
     }
 
     internal void To2B()
@@ -182,6 +227,17 @@ public class QuestionController2 : MonoBehaviour
             hintTextC.text = "Hint " + "(" + hintC.ToString() + ")";
         }
 
+    }
+
+    IEnumerator FadeTo(float aValue, float aTime, Transform tf)
+    {
+        float alpha = tf.GetComponent<Image>().color.a;
+        for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / aTime)
+        {
+            Color newColor = new Color(1, 1, 1, Mathf.Lerp(alpha, aValue, t));
+            tf.GetComponent<Image>().color = newColor;
+            yield return null;
+        }
     }
 
 }

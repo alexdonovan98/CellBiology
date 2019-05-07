@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class VideoText : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class VideoText : MonoBehaviour
     public GameObject cytokinesisText2;
 
 
+
     float timer = 0f;
 
     // Start is called before the first frame update
@@ -47,6 +49,7 @@ public class VideoText : MonoBehaviour
         anaphaseText1.SetActive(false);
         cytokinesisText1.SetActive(false);
         cytokinesisText2.SetActive(false);
+        GameObject.Find("MitosisVideo").transform.GetComponent<VideoPlayer>().url = System.IO.Path.Combine(Application.streamingAssetsPath, "MitosisVid.mp4");
 
     }
 

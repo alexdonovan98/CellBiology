@@ -10,7 +10,7 @@ public class DragTransformQ2b : MonoBehaviour
     public GameObject correctPosition2;
     private Vector3 initPos;
 
-    void OnMouseDown()
+    private void OnMouseDown()
     {
         screenpoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
         initPos = gameObject.transform.position;
@@ -25,8 +25,7 @@ public class DragTransformQ2b : MonoBehaviour
 
     private void OnMouseUp()
     {
-        //Debug.Log("Rect: " + correctAns.GetComponent<RectTransform>().rect);
-        //Debug.Log("Box2d: " + correctAns.GetComponent<BoxCollider2D>().bounds.ToString());
+        //Debug.Log("Box2d: " + correctPosition1.GetComponent<BoxCollider2D>().bounds.ToString());
         //Debug.Log("Curr Mouse: " + Camera.main.ScreenToWorldPoint(Input.mousePosition));
 
         if (correctPosition1.GetComponent<BoxCollider2D>().bounds.Contains(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenpoint.z)))
@@ -58,6 +57,14 @@ public class DragTransformQ2b : MonoBehaviour
         gameObject.GetComponent<Image>().color = Color.white;
     }
 }
+
+
+
+
+
+
+
+
 
 
 
