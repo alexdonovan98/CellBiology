@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Video;
 
 public class VideoText : MonoBehaviour
@@ -26,6 +27,9 @@ public class VideoText : MonoBehaviour
     public GameObject cytokinesisTitle;
     public GameObject cytokinesisText1;
     public GameObject cytokinesisText2;
+    public bool pause = false;
+    public GameObject pauseView;
+    public GameObject playView;
 
 
 
@@ -55,8 +59,10 @@ public class VideoText : MonoBehaviour
 
     void Update()
     {
-        timer += Time.deltaTime;
-
+        if (!pause)
+        {
+            timer += Time.deltaTime;
+        }
 
         if (timer >= 8f)
         {
@@ -115,8 +121,32 @@ public class VideoText : MonoBehaviour
             cytokinesisText1.SetActive(false);
             cytokinesisText2.SetActive(true);
         }
+        if (timer >= 55)
+        {
+            cytokinesisText2.SetActive(false);
+            cytokinesisTitle.SetActive(false);
+            GameObject p= GameObject.Find("Pause");
+            p.GetComponent<Button>().interactable = false;
+        }
+    } 
+
+    public void OnPause()
+    {
+        if (pause)
+        {
+            GameObject.Find("MitosisVideo").transform.GetComponent<VideoPlayer>().Play();
+            pauseView.SetActive(true);
+            playView.SetActive(false);
+            pause = false;
+        }
+        else
+        {
+            GameObject.Find("MitosisVideo").transform.GetComponent<VideoPlayer>().Pause();
+            pauseView.SetActive(false);
+            playView.SetActive(true);
+            pause = true;
+        }
     }
-    
 }
 
   
